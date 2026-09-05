@@ -1,158 +1,79 @@
-(function(){
-
+(function () {
   "use strict";
 
-
-  function get(id){
+  function $(id) {
     return document.getElementById(id);
   }
 
+  function syncSo() {
+    var so = $("so");
+    var soCover = $("soCover");
 
-  function sync(){
-
-    const so = get("so");
-    const soCover = get("soCover");
-
-    if(so && soCover){
-      soCover.textContent = so.value || "";
+    if (so && soCover) {
+      soCover.textContent = so.value;
     }
-
   }
 
+  window.fillDemo = function () {
 
-  function bind(){
+    var values = {
+      congTrinh: "MR. ĐẠI",
+      diaChi: "69 Chợ Con",
+      loaiThang: "Tải khách",
+      hieuThang: "THANG MÁY ĐỨC ANH VIỆT NAM",
+      load: "450kg – 4stop – 60m/phút",
+      soLuong: "01 thang",
 
-    const inputs =
-      document.querySelectorAll(
-        "input, textarea"
-      );
+      thang: "Tháng 07 năm 2026",
 
-    inputs.forEach(function(el){
+      mayKeo: "Torin",
+      xuatXu: "China",
+      taiTrong: "450",
+      diemDung: "04",
+      tocDo: "60",
+      congSuat: "3.3 KW",
+      capKeo: "8",
+      tuDien: "STEP",
 
-      el.addEventListener(
-        "input",
-        sync
-      );
-
-    });
-
-  }
-
-
-  window.fillDemo = function(){
-
-    const values = {
-
-      so:
-        "34.2026/BG-GROVA",
-
-      congTrinh:
-        "MR. ĐẠI",
-
-      diaChi:
-        "69 Chợ Con",
-
-      loaiThang:
-        "Tải khách",
-
-      hieuThang:
-        "THANG MÁY ĐỨC ANH VIỆT NAM",
-
-      load:
-        "450kg – 4stop – 60m/phút",
-
-      soLuong:
-        "01 thang",
-
-      thang:
-        "Tháng 07 năm 2026",
-
-      mayKeo:
-        "Torin",
-
-      xuatXu:
-        "China",
-
-      taiTrong:
-        "450",
-
-      diemDung:
-        "04",
-
-      tocDo:
-        "60",
-
-      congSuat:
-        "3.3 KW",
-
-      capKeo:
-        "8",
-
-      tuDien:
-        "STEP",
-
-      donGia1:
-        "315,000,000",
-
-      chuTien1:
-        "BA TRĂM MƯỜI NĂM TRIỆU ĐỒNG CHẴN",
-
-      khungThep:
-        "KHUNG THÉP THANG MÁY DẦY 4 MM BẢN 120 X 120 X 50 X 40 - 4 Tầng",
-
-      donGia2:
-        "55,000,000 VNĐ",
-
-      thanhTien2:
-        "55,000,000 VNĐ",
-
-      tongTien:
-        "370,000,000"
-
+      donGia1: "315,000,000",
+      tongTien: "370,000,000"
     };
 
+    Object.keys(values).forEach(function (key) {
 
-    Object.keys(values).forEach(function(key){
+      var element = $(key);
 
-      const el = get(key);
-
-      if(el){
-        el.value = values[key];
+      if (element) {
+        element.value = values[key];
       }
 
     });
 
-
-    sync();
-
+    syncSo();
   };
 
+  window.resetForm = function () {
 
-  window.resetForm = function(){
+    var ok = window.confirm(
+      "Xóa toàn bộ dữ liệu đã nhập và khôi phục mẫu ban đầu?"
+    );
 
-    const ok =
-      window.confirm(
-        "Xóa toàn bộ dữ liệu đã nhập và khôi phục mẫu ban đầu?"
-      );
-
-    if(!ok){
-      return;
+    if (ok) {
+      window.location.reload();
     }
-
-    window.location.reload();
-
   };
 
+  document.addEventListener("DOMContentLoaded", function () {
 
-  document.addEventListener(
-    "DOMContentLoaded",
-    function(){
+    var so = $("so");
 
-      bind();
-
-      sync();
-
+    if (so) {
+      so.addEventListener("input", syncSo);
+      so.addEventListener("change", syncSo);
     }
-  );
+
+    syncSo();
+
+  });
 
 })();
