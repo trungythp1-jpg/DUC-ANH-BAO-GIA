@@ -1,12 +1,12 @@
 :root{
   --yellow:#f4b400;
-  --yellow-2:#ffd24a;
-  --yellow-soft:#fff7d6;
-  --black:#111;
-  --ink:#20252b;
-  --line:#b9c0c7;
-  --paper:#fff;
-  --screen:#e8edf1;
+  --yellow-dark:#d99b00;
+  --black:#111111;
+  --ink:#20252a;
+  --muted:#68717a;
+  --line:#d5d9dd;
+  --soft:#fff8dc;
+  --paper:#ffffff;
 }
 
 *{
@@ -14,126 +14,85 @@
 }
 
 html{
-  scroll-behavior:smooth;
+  margin:0;
+  padding:0;
 }
 
 body{
   margin:0;
-  background:var(--screen);
+  background:#eef1f3;
   color:var(--ink);
   font-family:Arial,Helvetica,sans-serif;
-  -webkit-print-color-adjust:exact;
-  print-color-adjust:exact;
 }
 
-
-/* =========================
+/* =========================================================
    TOOLBAR
-========================= */
+========================================================= */
 
 .toolbar{
   position:sticky;
   top:0;
   z-index:100;
-  min-height:64px;
-  padding:10px 16px;
+  background:#fff;
+  border-bottom:1px solid #d8dde2;
+  padding:10px 14px;
   display:flex;
   align-items:center;
-  gap:9px;
+  gap:10px;
   flex-wrap:wrap;
-
-  background:rgba(255,255,255,.97);
-  border-bottom:1px solid #d6dce1;
-
-  box-shadow:
-    0 3px 16px rgba(0,0,0,.10);
-
-  backdrop-filter:blur(8px);
+  box-shadow:0 3px 12px #00000012;
 }
 
 .toolbar strong{
   margin-right:auto;
-  padding-left:11px;
-
-  border-left:5px solid var(--yellow);
-
   color:var(--black);
-
-  font-size:17px;
-  line-height:1.2;
+  font-size:18px;
+  font-weight:800;
+  border-left:5px solid var(--yellow);
+  padding-left:10px;
 }
 
 button{
-  appearance:none;
-
-  border:1px solid var(--black);
-  border-radius:8px;
-
-  min-height:40px;
-
-  padding:9px 14px;
-
-  font:
-    700 13px/1
-    Arial,Helvetica,sans-serif;
-
+  border:0;
+  border-radius:9px;
+  padding:11px 17px;
+  font-weight:800;
+  font-size:14px;
   cursor:pointer;
-
   background:var(--black);
   color:#fff;
-
-  transition:
-    transform .12s ease,
-    box-shadow .12s ease;
-}
-
-button:hover{
-  box-shadow:0 4px 12px rgba(0,0,0,.14);
-  transform:translateY(-1px);
-}
-
-button:active{
-  transform:translateY(0);
 }
 
 button.secondary{
-  background:var(--yellow-soft);
-  color:#3b3000;
-  border-color:#e0b62f;
+  background:#fff8d9;
+  color:#493900;
+  border:1px solid #e5b932;
 }
 
 button.danger{
-  background:#fff1f1;
-  color:#a21d1d;
-  border-color:#edc3c3;
+  background:#fff2f2;
+  color:#a52020;
+  border:1px solid #efc6c6;
 }
 
+button:active{
+  transform:translateY(1px);
+}
 
-/* =========================
-   A4
-========================= */
+/* =========================================================
+   A4 PAPER
+========================================================= */
 
 .paper{
-  position:relative;
-
   width:210mm;
   height:297mm;
   min-height:297mm;
-
   margin:18px auto;
-
-  padding:
-    15mm
-    15mm
-    16mm;
-
-  overflow:hidden;
-
   background:var(--paper);
-
-  box-shadow:
-    0 5px 24px rgba(0,0,0,.14);
-
+  position:relative;
+  padding:13mm 14mm 15mm;
+  box-shadow:0 4px 22px #00000018;
+  overflow:hidden;
   page-break-after:always;
   break-after:page;
 }
@@ -143,528 +102,481 @@ button.danger{
   break-after:auto;
 }
 
-
-/* =========================
-   BRAND
-========================= */
+/* =========================================================
+   HEADER
+========================================================= */
 
 .brand{
   display:flex;
   align-items:center;
   justify-content:space-between;
-
-  gap:18px;
-
-  min-height:62px;
-
-  margin-bottom:17px;
-  padding-bottom:9px;
-
-  border-bottom:4px solid var(--yellow);
+  gap:15px;
+  min-height:24mm;
+  padding-bottom:7px;
+  border-bottom:3px solid var(--yellow);
+  margin-bottom:10mm;
 }
 
 .brand-left{
   display:flex;
   align-items:center;
   gap:12px;
-
   min-width:0;
 }
 
 .brand-logo{
-  flex:0 0 auto;
+  flex:0 0 19mm;
+  width:19mm;
+  height:19mm;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
 .brand-logo img{
-  display:block;
-
-  width:68px;
-  height:58px;
-
+  width:100%;
+  height:100%;
   object-fit:contain;
+  display:block;
 }
 
 .brand-name{
-  color:var(--black);
-
   font-size:21px;
+  line-height:1.15;
   font-weight:900;
-
-  line-height:1.12;
-
-  letter-spacing:.9px;
+  letter-spacing:.5px;
+  color:var(--black);
 }
 
 .brand-sub{
   margin-top:3px;
-
-  color:#59636d;
-
   font-size:9px;
-
-  letter-spacing:.65px;
-}
-
-.company-meta{
-  max-width:125mm;
-
-  margin-top:3px;
-
-  color:#66717c;
-
-  font-size:8.2px;
-
-  line-height:1.35;
-}
-
-.docno{
-  color:#555;
-
-  font-size:10.5px;
-  line-height:1.35;
-
-  text-align:right;
-
-  white-space:nowrap;
-}
-
-.simple-brand{
-  min-height:48px;
-}
-
-
-/* =========================
-   COVER
-========================= */
-
-.cover-title{
-  margin:22px 0 12px;
-
-  color:#172026;
-
-  text-align:center;
-
-  font-size:28px;
-  font-weight:900;
-
+  line-height:1.2;
+  color:#59636c;
   letter-spacing:.5px;
 }
 
+.company-meta{
+  margin-top:4px;
+  font-size:8px;
+  line-height:1.3;
+  color:#737d85;
+}
+
+.docno{
+  flex:0 0 auto;
+  font-size:11px;
+  color:#555;
+  text-align:right;
+  white-space:nowrap;
+}
+
+.input-sm{
+  width:105px !important;
+  display:inline-block !important;
+}
+
+/* =========================================================
+   COVER PAGE
+========================================================= */
+
+.cover-title{
+  margin:7mm 0 6mm;
+  text-align:center;
+  font-size:29px;
+  line-height:1.15;
+  font-weight:900;
+  letter-spacing:1px;
+  color:#151c21;
+}
+
+/* ảnh cover */
+
 .cover-visual{
   width:82mm;
-  height:49mm;
-
-  margin:
-    0 auto
-    13px;
-
+  height:50mm;
+  margin:2mm auto 5mm;
   overflow:hidden;
-
-  border:1px solid #ddd;
   border-radius:5px;
-
-  box-shadow:
-    0 8px 22px rgba(0,0,0,.12);
+  border:1px solid #d7d7d7;
+  box-shadow:0 7px 20px #00000016;
+  background:#f4f4f4;
 }
 
 .cover-visual img{
   width:100%;
   height:100%;
-
   display:block;
-
   object-fit:cover;
 }
 
+/* watermark */
+
+.watermark{
+  position:absolute;
+  left:50%;
+  top:55%;
+  transform:translate(-50%,-50%) rotate(-35deg);
+  font-size:31px;
+  line-height:1;
+  font-weight:900;
+  color:#f4b40012;
+  white-space:nowrap;
+  pointer-events:none;
+  z-index:0;
+}
+
+/* thông tin công trình */
+
 .cover-grid{
-  max-width:155mm;
-
-  margin:16px auto 0;
-
-  text-align:center;
+  position:relative;
+  z-index:2;
+  width:100%;
+  max-width:142mm;
+  margin:0 auto;
+  padding:0;
 }
 
 .cover-grid .row{
-  margin:6px 0;
-
-  font-size:14px;
-  line-height:1.4;
+  width:100%;
+  min-height:11mm;
+  margin:2.5mm 0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  font-size:15px;
+  line-height:1.25;
 }
 
-.cover-grid .main{
+.cover-grid .row b{
+  flex:0 0 auto;
+  font-weight:800;
+}
+
+.cover-grid .row.main{
   font-size:17px;
   font-weight:800;
 }
 
+/*
+  Ghi đè toàn bộ width inline trong HTML.
+  Đây là phần sửa lỗi ô nhập bị cắt.
+*/
+
 .cover-grid input{
-  display:inline-block;
-
-  width:auto;
-
+  width:auto !important;
   max-width:100%;
+  min-width:0;
+  height:9mm;
+  padding:5px 9px;
+  border:1px solid #d7ad29;
+  border-radius:5px;
+  background:#fffdf3;
+  color:#111;
+  font-size:15px;
+  font-weight:500;
 }
+
+.cover-grid .main input{
+  font-size:17px;
+  font-weight:800;
+}
+
+/* từng ô */
+
+#congTrinh{
+  width:62mm !important;
+}
+
+#diaChi{
+  width:58mm !important;
+}
+
+#loaiThang{
+  width:52mm !important;
+}
+
+#hieuThang{
+  width:70mm !important;
+}
+
+#load{
+  width:76mm !important;
+}
+
+#soLuong{
+  width:43mm !important;
+}
+
+#thang{
+  width:55mm !important;
+}
+
+/* số báo giá */
+
+#soCover{
+  font-weight:700;
+}
+
+/* ngày tháng */
 
 .cover-bottom{
   position:absolute;
-
-  left:15mm;
-  right:15mm;
-
-  bottom:18mm;
-
+  left:14mm;
+  right:14mm;
+  bottom:19mm;
   display:flex;
-
   justify-content:center;
-  align-items:end;
+  align-items:center;
+  z-index:3;
 }
 
 .cover-bottom input{
-  width:150px;
-
-  background:transparent;
-  border:0;
-
-  text-align:center;
+  font-size:15px;
+  font-weight:800;
 }
 
-.watermark{
-  position:absolute;
-
-  left:50%;
-  top:57%;
-
-  transform:
-    translate(-50%,-50%)
-    rotate(-35deg);
-
-  color:rgba(244,180,0,.07);
-
-  font-size:39px;
-  font-weight:900;
-
-  white-space:nowrap;
-
-  pointer-events:none;
-  user-select:none;
-}
-
-
-/* =========================
-   TYPOGRAPHY
-========================= */
+/* =========================================================
+   TITLES
+========================================================= */
 
 h1{
   text-align:center;
-
-  font-size:24px;
-
-  margin:
-    18px 0
-    10px;
-
-  color:#172026;
+  font-size:25px;
+  margin:10px 0;
 }
 
 h2{
   text-align:center;
-
-  font-size:17px;
-
-  margin:
-    0 0
-    12px;
+  font-size:18px;
+  margin:0 0 10px;
 }
 
 h3{
-  margin:
-    15px 0
-    8px;
-
-  padding:
-    7px 9px;
-
-  border-left:4px solid var(--yellow);
-
-  background:
-    linear-gradient(
-      90deg,
-      #fff9df 0%,
-      #fff 78%
-    );
-
-  color:var(--black);
-
   font-size:14px;
-
-  line-height:1.25;
+  line-height:1.3;
+  margin:10px 0 7px;
+  color:var(--black);
+  border-left:4px solid var(--yellow);
+  padding:7px 9px;
+  background:linear-gradient(
+    90deg,
+    #fff9df 0%,
+    #fffdf5 70%,
+    transparent 100%
+  );
 }
 
-.para{
-  margin:6px 0;
-
-  font-size:11.1px;
-
-  line-height:1.42;
-}
-
-.note{
-  margin:8px 0;
-
-  font-size:10.8px;
-
-  line-height:1.46;
-}
-
-ul{
-  margin:
-    5px 0
-    8px 19px;
-
-  padding:0;
-}
-
-li{
-  margin:2.5px 0;
-
-  font-size:10.9px;
-
-  line-height:1.38;
-}
-
-
-/* =========================
+/* =========================================================
    TABLE
-========================= */
+========================================================= */
 
 table{
   width:100%;
-
   border-collapse:collapse;
-
-  font-size:11.1px;
-
   table-layout:fixed;
+  font-size:10.5px;
 }
 
 th,
 td{
-  border:1px solid #aeb7bf;
-
-  padding:
-    5.5px
-    6.5px;
-
+  border:1px solid #b9c0c6;
+  padding:5px 6px;
   vertical-align:middle;
-
   overflow-wrap:anywhere;
 }
 
 th{
-  background:var(--yellow-soft);
-
-  color:#171717;
-
+  background:#fff7d2;
+  color:#151515;
   font-weight:800;
 }
 
 .label{
-  width:43%;
-
+  width:40%;
   font-weight:700;
 }
 
 .section{
-  background:var(--black)!important;
-
-  color:#fff!important;
-
+  background:var(--black) !important;
+  color:#fff !important;
   font-weight:900;
-
-  border-left:
-    4px solid
-    var(--yellow)!important;
+  border-left:4px solid var(--yellow) !important;
 }
 
 .price td{
-  font-size:12.5px;
-
+  font-size:12px;
   font-weight:800;
-}
-
-.center{
-  text-align:center;
 }
 
 .right{
   text-align:right;
 }
 
+.center{
+  text-align:center;
+}
 
-/* =========================
-   INPUT
-========================= */
+/* =========================================================
+   INPUTS
+========================================================= */
 
 input,
 textarea,
-select{
+select,
+.editable{
+  font:inherit;
+  border:1px solid #d6b43a;
+  border-radius:4px;
+  padding:4px 6px;
+  background:#fffdf0;
+  color:#111;
   width:100%;
   max-width:100%;
-  min-width:0;
-
-  padding:
-    3px
-    5px;
-
-  border:
-    1px solid
-    #d6b43a;
-
-  border-radius:4px;
-
-  background:#fffdf0;
-
-  color:#111;
-
-  font:inherit;
 }
 
 input:focus,
 textarea:focus,
 select:focus{
-  outline:
-    2px solid
-    rgba(244,180,0,.32);
-
-  border-color:#c79500;
-
-  background:#fff;
+  outline:2px solid #f4b40033;
+  border-color:#d99b00;
 }
 
-.input-sm{
-  display:inline-block;
-
-  width:100px;
+textarea{
+  resize:vertical;
+  min-height:45px;
 }
 
 input.num{
   text-align:right;
 }
 
-textarea{
-  resize:none;
+/* =========================================================
+   TEXT
+========================================================= */
 
-  min-height:48px;
-
-  line-height:1.35;
+.note{
+  font-size:10.5px;
+  line-height:1.45;
+  margin:7px 0;
 }
 
+.para{
+  font-size:10.5px;
+  line-height:1.42;
+  margin:6px 0;
+}
 
-/* =========================
+ul{
+  margin:5px 0 7px 18px;
+  padding:0;
+}
+
+li{
+  font-size:10.3px;
+  line-height:1.38;
+  margin:2px 0;
+}
+
+.hint{
+  font-size:9px;
+  color:#6b7280;
+  margin:5px 0 10px;
+}
+
+.mono{
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+
+/* =========================================================
    SIGNATURE
-========================= */
+========================================================= */
 
 .sign{
   display:grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
+  grid-template-columns:1fr 1fr;
   gap:35px;
-
-  margin-top:32px;
-
   text-align:center;
-
-  font-size:11px;
+  margin-top:25px;
+  font-size:10.5px;
 }
 
 .sign-space{
-  height:45px;
+  height:48px;
 }
 
-
-/* =========================
+/* =========================================================
    FOOTER
-========================= */
+========================================================= */
 
 .footer{
   position:absolute;
-
-  left:15mm;
-  right:15mm;
-
-  bottom:8mm;
-
-  display:flex;
-
-  justify-content:space-between;
-
+  left:14mm;
+  right:14mm;
+  bottom:7mm;
+  border-top:3px solid var(--yellow);
   padding-top:4px;
-
-  border-top:
-    3px solid
-    var(--yellow);
-
-  color:var(--black);
-
   font-size:8.5px;
+  color:#202020;
+  display:flex;
+  justify-content:space-between;
 }
 
-
-/* =========================
-   MOBILE
-========================= */
+/* =========================================================
+   MOBILE / IPAD
+========================================================= */
 
 @media(max-width:900px){
 
+  body{
+    background:#eef1f3;
+  }
+
   .toolbar{
-    position:sticky;
-
-    top:0;
-
-    padding:
-      9px
-      10px;
+    position:static;
+    padding:10px 12px;
   }
 
   .toolbar strong{
-    flex:
-      1 0 100%;
-
-    font-size:15px;
+    width:100%;
+    margin:0 0 2px;
+    font-size:16px;
   }
+
+  .toolbar button{
+    flex:0 0 auto;
+  }
+
+  /*
+    Hiển thị giấy như một trang tài liệu,
+    không ép nội dung tràn ngang màn hình.
+  */
 
   .paper{
     width:100%;
-
     height:auto;
-
     min-height:0;
-
-    margin:
-      0 0
-      12px;
-
-    padding:18px;
-
-    box-shadow:
-      0 2px 12px
-      rgba(0,0,0,.10);
+    margin:10px 0;
+    padding:20px 18px 55px;
+    overflow:hidden;
+    box-shadow:0 2px 12px #00000014;
   }
 
-  .footer,
-  .cover-bottom{
-    position:static;
-
-    margin-top:25px;
+  .brand{
+    min-height:auto;
+    margin-bottom:28px;
+    padding-bottom:9px;
   }
 
-  .watermark{
-    font-size:27px;
+  .brand-logo{
+    width:58px;
+    height:58px;
+    flex-basis:58px;
   }
 
   .brand-name{
-    font-size:17px;
+    font-size:18px;
   }
 
   .brand-sub{
@@ -675,55 +587,186 @@ textarea{
     font-size:7.5px;
   }
 
+  .docno{
+    font-size:10px;
+  }
+
+  /* COVER */
+
+  .cover-visual{
+    width:min(82mm,72vw);
+    height:auto;
+    aspect-ratio:82 / 50;
+    margin:0 auto 18px;
+  }
+
+  .cover-title{
+    font-size:27px;
+    margin:14px 0 18px;
+  }
+
+  .cover-grid{
+    max-width:100%;
+  }
+
+  .cover-grid .row,
+  .cover-grid .row.main{
+    display:grid;
+    grid-template-columns:92px minmax(0,1fr);
+    justify-content:stretch;
+    align-items:center;
+    text-align:right;
+    gap:8px;
+    min-height:42px;
+    margin:5px 0;
+    font-size:15px;
+  }
+
+  .cover-grid .row b{
+    text-align:right;
+  }
+
+  .cover-grid input,
+  .cover-grid .main input{
+    width:100% !important;
+    min-width:0;
+    font-size:15px;
+    font-weight:500;
+  }
+
+  .cover-grid .main input{
+    font-weight:800;
+  }
+
+  .cover-bottom{
+    position:static;
+    margin-top:28px;
+  }
+
+  .cover-bottom input{
+    width:150px !important;
+  }
+
+  .watermark{
+    font-size:23px;
+  }
+
+  table{
+    font-size:10px;
+  }
+
+  th,
+  td{
+    padding:5px 4px;
+  }
+
+  .note,
+  .para{
+    font-size:10px;
+  }
+
+  li{
+    font-size:9.8px;
+  }
+
+  .footer{
+    position:static;
+    margin-top:30px;
+  }
 }
 
+/* =========================================================
+   SMALL PHONE
+========================================================= */
 
-/* =========================
+@media(max-width:480px){
+
+  .toolbar button{
+    padding:10px 12px;
+    font-size:13px;
+  }
+
+  .brand{
+    align-items:flex-start;
+  }
+
+  .brand-left{
+    gap:8px;
+  }
+
+  .brand-logo{
+    width:48px;
+    height:48px;
+    flex-basis:48px;
+  }
+
+  .brand-name{
+    font-size:15px;
+  }
+
+  .brand-sub{
+    font-size:7px;
+  }
+
+  .company-meta{
+    font-size:6.8px;
+  }
+
+  .docno{
+    font-size:9px;
+  }
+
+  .input-sm{
+    width:88px !important;
+  }
+
+  .cover-title{
+    font-size:23px;
+  }
+
+  .cover-grid .row,
+  .cover-grid .row.main{
+    grid-template-columns:82px minmax(0,1fr);
+    font-size:14px;
+  }
+
+  .cover-grid input,
+  .cover-grid .main input{
+    font-size:14px;
+  }
+}
+
+/* =========================================================
    PRINT / PDF
-========================= */
+========================================================= */
+
+@page{
+  size:A4;
+  margin:0;
+}
 
 @media print{
-
-  @page{
-    size:A4 portrait;
-    margin:0;
-  }
 
   html,
   body{
     width:210mm;
-
     margin:0;
-
-    background:#fff;
-  }
-
-  body{
-    overflow:visible;
+    padding:0;
+    background:#fff !important;
   }
 
   .toolbar{
-    display:none!important;
+    display:none !important;
   }
 
   .paper{
-    width:210mm;
-
-    height:297mm;
-
-    min-height:297mm;
-
-    margin:0;
-
-    padding:
-      15mm
-      15mm
-      16mm;
-
-    overflow:hidden;
-
-    box-shadow:none;
-
+    width:210mm !important;
+    height:297mm !important;
+    min-height:297mm !important;
+    margin:0 !important;
+    padding:13mm 14mm 15mm !important;
+    box-shadow:none !important;
+    overflow:hidden !important;
     page-break-after:always;
     break-after:page;
   }
@@ -733,35 +776,57 @@ textarea{
     break-after:auto;
   }
 
+  /*
+    Khi in, bỏ viền ô nhập để báo giá trông
+    như tài liệu hoàn chỉnh.
+  */
+
   input,
   textarea,
-  select{
-    border:0!important;
-
-    outline:0!important;
-
-    background:transparent!important;
-
-    box-shadow:none!important;
-
-    padding:0;
-
-    appearance:none;
-
-    -webkit-appearance:none;
+  select,
+  .editable{
+    border:0 !important;
+    background:transparent !important;
+    outline:none !important;
+    padding:0 !important;
+    appearance:none !important;
+    -webkit-appearance:none !important;
   }
 
-  textarea{
-    resize:none;
+  /* Không để trình duyệt tự thêm khoảng trắng */
 
-    overflow:hidden;
+  .brand{
+    margin-bottom:8mm;
   }
 
   .cover-visual{
-    box-shadow:none;
+    box-shadow:none !important;
   }
 
-  button{
-    display:none!important;
+  .cover-grid input{
+    color:#111 !important;
+  }
+
+  /*
+    Giữ từng phần trong đúng trang A4.
+  */
+
+  table{
+    page-break-inside:auto;
+  }
+
+  tr{
+    page-break-inside:avoid;
+    break-inside:avoid;
+  }
+
+  h3{
+    page-break-after:avoid;
+    break-after:avoid;
+  }
+
+  .sign{
+    page-break-inside:avoid;
+    break-inside:avoid;
   }
 }
