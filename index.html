@@ -1,1 +1,1555 @@
-#
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f4b400">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="css/style.css">
+
+<title>THANG MÁY ĐỨC ANH VIỆT NAM – Báo giá thang máy</title>
+</head>
+
+<body>
+
+<div class="toolbar">
+  <strong>THANG MÁY ĐỨC ANH VIỆT NAM · Mẫu báo giá thang máy</strong>
+
+  <button onclick="window.print()">
+    In / Lưu PDF
+  </button>
+
+  <button class="secondary" onclick="fillDemo()">
+    Nạp dữ liệu mẫu
+  </button>
+
+  <button class="danger" onclick="resetForm()">
+    Xóa dữ liệu nhập
+  </button>
+</div>
+
+
+<!-- =========================
+     TRANG 1
+========================= -->
+
+<div class="paper">
+
+  <div class="brand">
+
+    <div class="brand-left">
+
+      <div class="brand-logo">
+        <img
+          src="assets/logo/logo-duc-anh.png"
+          alt="Logo Đức Anh"
+        >
+      </div>
+
+      <div>
+        <div class="brand-name">
+          THANG MÁY ĐỨC ANH VIỆT NAM
+        </div>
+
+        <div class="brand-sub">
+          DUC ANH VIET NAM ELEVATOR LIMITED COMPANY
+        </div>
+
+        <div class="company-meta">
+          MST: 0201879133 · Đ/c: HP81, Royal Island, Đảo Vũ Yên, Phường Thủy Nguyên, TP Hải Phòng
+        </div>
+      </div>
+
+    </div>
+
+    <div class="docno">
+      Số:
+      <input
+        class="input-sm"
+        id="so"
+        value="34.2026/BG-GROVA"
+      >
+    </div>
+
+  </div>
+
+
+  <div class="watermark">
+    THANG MÁY ĐỨC ANH VIỆT NAM
+  </div>
+
+
+  <div class="cover-visual">
+    <img
+      src="assets/images/elevator-cover.png"
+      alt="Hình ảnh thang máy Đức Anh"
+    >
+  </div>
+
+
+  <h1 class="cover-title">
+    BÁO GIÁ THANG MÁY
+  </h1>
+
+
+  <div class="cover-grid">
+
+    <div class="row">
+      <b>Số:</b>
+      <span id="soCover"></span>
+    </div>
+
+    <div class="row main">
+      CÔNG TRÌNH:
+      <input
+        id="congTrinh"
+        value="MR. ĐẠI"
+      >
+    </div>
+
+    <div class="row">
+      <b>Địa chỉ:</b>
+      <input
+        id="diaChi"
+        value="69 Chợ Con"
+      >
+    </div>
+
+    <br>
+
+    <div class="row main">
+      Loại thang:
+      <input
+        id="loaiThang"
+        value="Tải khách"
+      >
+    </div>
+
+    <div class="row">
+      <b>Hiệu:</b>
+      <input
+        id="hieuThang"
+        value="THANG MÁY ĐỨC ANH VIỆT NAM"
+      >
+    </div>
+
+    <div class="row">
+      <b>Load:</b>
+      <input
+        id="load"
+        value="450kg – 4stop – 60m/phút"
+      >
+    </div>
+
+    <div class="row">
+      <b>Số lượng:</b>
+      <input
+        id="soLuong"
+        value="01 thang"
+      >
+    </div>
+
+  </div>
+
+
+  <div class="cover-bottom">
+
+    <div>
+      <b>
+        <input
+          id="thang"
+          value="Tháng 07 năm 2026"
+        >
+      </b>
+    </div>
+
+  </div>
+
+
+  <div class="footer">
+    <span>THANG MÁY ĐỨC ANH VIỆT NAM</span>
+    <span>Trang 1</span>
+  </div>
+
+</div>
+
+
+
+<!-- =========================
+     TRANG 2
+========================= -->
+
+<div class="paper">
+
+  <div class="brand simple-brand">
+    <div class="brand-name">
+      THANG MÁY ĐỨC ANH VIỆT NAM
+    </div>
+
+    <div class="docno">
+      BẢNG GIÁ THANG MÁY
+    </div>
+  </div>
+
+
+  <h2>
+    BẢNG GIÁ THANG MÁY
+  </h2>
+
+
+  <h3>
+    Điều 1.1: GIÁ THÀNH SẢN PHẨM PHẦN THANG MÁY
+  </h3>
+
+
+  <table>
+
+    <tr>
+      <th>Nội dung</th>
+
+      <th>
+        Máy kéo<br>
+
+        <input
+          class="center"
+          id="mayKeo"
+          value="Torin"
+        >
+      </th>
+    </tr>
+
+    <tr>
+      <td class="label">Xuất sứ</td>
+
+      <td>
+        <input
+          class="center"
+          id="xuatXu"
+          value="China"
+        >
+      </td>
+    </tr>
+
+    <tr>
+      <td class="label">Trọng tải (Kg)</td>
+
+      <td>
+        <input
+          class="center"
+          id="taiTrong"
+          value="450"
+        >
+      </td>
+    </tr>
+
+    <tr>
+      <td class="label">Điểm dừng (Stops)</td>
+
+      <td>
+        <input
+          class="center"
+          id="diemDung"
+          value="04"
+        >
+      </td>
+    </tr>
+
+    <tr>
+      <td class="label">Tốc độ (m/p)</td>
+
+      <td>
+        <input
+          class="center"
+          id="tocDo"
+          value="60"
+        >
+      </td>
+    </tr>
+
+    <tr>
+      <td class="label">Công suất</td>
+
+      <td>
+        <input
+          class="center"
+          id="congSuat"
+          value="3.3 KW"
+        >
+      </td>
+    </tr>
+
+    <tr>
+      <td class="label">Cáp kéo</td>
+
+      <td>
+        <input
+          class="center"
+          id="capKeo"
+          value="8"
+        >
+      </td>
+    </tr>
+
+    <tr>
+      <td class="label">Tủ điện</td>
+
+      <td>
+        <input
+          class="center"
+          id="tuDien"
+          value="STEP"
+        >
+      </td>
+    </tr>
+
+    <tr class="price">
+      <td>Đơn Giá</td>
+
+      <td>
+        <input
+          class="num"
+          id="donGia1"
+          value="315,000,000"
+        >
+      </td>
+    </tr>
+
+    <tr class="price">
+      <td>Thành Tiền</td>
+
+      <td>
+        <input
+          class="center"
+          id="chuTien1"
+          value="BA TRĂM MƯỜI NĂM TRIỆU ĐỒNG CHẴN"
+        >
+      </td>
+    </tr>
+
+  </table>
+
+
+  <h3>
+    Điều 1.2: KHUNG THÉP CHỊU LỰC HỐ THANG MÁY (II)
+  </h3>
+
+
+  <table>
+
+    <tr>
+      <th>NỘI DUNG</th>
+      <th>ĐƠN GIÁ</th>
+      <th>THÀNH TIỀN</th>
+    </tr>
+
+    <tr>
+
+      <td>
+        <textarea id="khungThep">KHUNG THÉP THANG MÁY DẦY 4 MM BẢN 120 X 120 X 50 X 40 - 4 Tầng</textarea>
+      </td>
+
+      <td>
+        <input
+          class="num"
+          id="donGia2"
+          value="55,000,000 VNĐ"
+        >
+      </td>
+
+      <td>
+        <input
+          class="num"
+          id="thanhTien2"
+          value="55,000,000 VNĐ"
+        >
+      </td>
+
+    </tr>
+
+  </table>
+
+
+  <p class="note center">
+
+    <b>
+      <i>Tổng tiền I + II:</i>
+    </b>
+
+    <input
+      id="tongTien"
+      value="370,000,000"
+    >
+
+    (Ba trăm bẩy mươi triệu đồng chẵn)
+
+  </p>
+
+
+  <p class="note">
+    <b><u>Giá trên đã bao gồm:</u></b>
+    giá vật tư, thiết bị thang máy tại chân công trình, bảo hành thiết bị miễn phí 12tháng (<i>Thời gian bảo hành hàng tháng Công ty cử kỹ sư xuống kiểm tra An toàn và vệ sinh thiết bị thang máy cho tới khi hết thời gian bảo hành</i>).
+  </p>
+
+
+  <p class="note">
+    <b><u>Đơn giá đã bao gồm:</u></b>
+    Thuế VAT 8%
+  </p>
+
+
+  <p class="note">
+    (Chưa bao gồm Aptomat 40A, đường dây điện 3 pha lên đỉnh giếng thang, tiếp địa lên đỉnh giếng thang (Chủ nhà cung cấp chưa gồm trong báo giá)
+  </p>
+
+
+  <p class="note">
+    - Cọc đồng độ dày tối thiểu 14mm, dài tối thiểu 2m.
+  </p>
+
+  <p class="note">
+    - Dây dẫn đồng độ dày tối thiểu 6mm.
+  </p>
+
+  <p class="note">
+    - Chôn cọc đồng cách xa tiếp địa chống sét của toà nhà.
+  </p>
+
+  <p class="note">
+    - Sử dụng tối thiểu 2 cọc đồng, chôn cách nhau tối thiểu 50cm điện trở tối đa là 4 ôm.
+  </p>
+
+
+  <div class="footer">
+    <span>THANG MÁY ĐỨC ANH VIỆT NAM</span>
+    <span>Trang 2</span>
+  </div>
+
+</div>
+
+
+
+<!-- =========================
+     TRANG 3
+========================= -->
+
+<div class="paper">
+
+  <div class="brand simple-brand">
+    <div class="brand-name">
+      THANG MÁY ĐỨC ANH VIỆT NAM
+    </div>
+
+    <div class="docno">
+      BÁO GIÁ THANG MÁY
+    </div>
+  </div>
+
+
+  <h3>
+    Điều 2: Hiệu lực báo giá
+  </h3>
+
+  <p class="para">
+    - Báo giá này có hiệu lực trong thời hạn 30 ngày kể từ ngày ký báo giá.
+  </p>
+
+  <p class="para">
+    - Quá thời gian trên giá chào hàng trong bản báo giá này có thể được điều chỉnh từ phía bên Bán.
+  </p>
+
+
+  <h3>
+    Điều 3: Phạm vi cung cấp và lắp đặt thang máy của Công ty TNHH Thang máy Đức Anh Việt Nam
+  </h3>
+
+  <p class="para">
+    - Khảo sát và thiết kế bản vẽ mặt bằng hố thang.
+  </p>
+
+  <p class="para">
+    - Nhập khẩu, chế tạo, cung cấp thiết bị thang máy theo các thông số kỹ thuật trong phần phụ lục đính kèm.
+  </p>
+
+  <p class="para">
+    - Nhận hàng và vận chuyển thiết bị thang máy đến chân công trình.
+  </p>
+
+  <p class="para">
+    - Lắp đặt thang máy, hiệu chỉnh đưa thang máy vào sử dụng.
+  </p>
+
+  <p class="para">
+    - Trực sửa chữa, bảo trì và bảo hành thiết bị trong thời hạn 12 tháng kể từ ngày hai bên ký biên bản nghiệm thu bàn giao thang máy hoặc 18 tháng kể từ ngày hàng về đến chân công trình
+  </p>
+
+
+  <h3>
+    Điều 4: Bảo Hành và Bảo Trì
+  </h3>
+
+  <p class="para">
+    - Bên B có trách nhiệm <b><i>bảo hành thiết bị trong thời hạn mười hai (12) tháng hoặc mười năm (15) tháng kể từ khi giao hàng đến chân công trình. Bảo hành máy kéo 5 năm.</i></b>
+  </p>
+
+  <p class="para">
+    - Bên B có trách nhiệm <b><i>bảo trì miễn phí thang máy trong thời hạn mười hai (12) tháng kể từ ngày nghiệm thu và bàn giao thang máy.(Một tháng 1 lần)</i></b>
+  </p>
+
+  <p class="para">
+    - Kể từ ngày hai bên ký Biên bản nghiệm thu hoàn thành hạng mục công trình để đưa vào sử dụng. Nếu trong thời gian bảo hành mà thang máy bị hư hỏng, nhận được thông báo của bên A trong thời gian sớm nhất bên B phải cử người đến xử lý và chịu mọi phí tổn sửa chữa nếu xảy ra sự cố kỹ thuật do lỗi của nhà sản xuất hoặc do lỗi khác của bên B.
+  </p>
+
+
+  <h3>
+    Nội dung bảo trì:
+  </h3>
+
+  <p class="para">
+    <b>I. &nbsp; Quy Trình Bảo Trì Thang Máy – Công Ty Cổ Phần Grova Holdings</b>
+  </p>
+
+  <p class="para">
+    <b><i>Bước 1: Kiểm tra và vệ sinh buồng thang máy</i></b>
+  </p>
+
+  <ul>
+
+    <li>
+      Kỹ thuật tiến hành kiểm tra điện áp nguồn và các thiết bị đóng ngắt điện nguồn xem có an toàn không.
+    </li>
+
+    <li>
+      Kiểm tra tủ điều khiển xem các thiết bị aptomat, rơ le, quạt,.. có bị hỏng hóc gì không.
+    </li>
+
+    <li>
+      Siết chặt lại các vít kẹp đầu dây điện với các đầu đấu, thiết bị điện.
+    </li>
+
+    <li>
+      Kiểm tra bộ cứu hộ xem chế độ nạp điện còn hoạt động tốt không.
+    </li>
+
+    <li>
+      Kiểm tra má phanh trái của động cơ có bị mòn không.
+    </li>
+
+  </ul>
+
+
+  <div class="footer">
+    <span>THANG MÁY ĐỨC ANH VIỆT NAM</span>
+    <span>Trang 3</span>
+  </div>
+
+</div>
+
+
+
+<!-- =========================
+     TRANG 4
+========================= -->
+
+<div class="paper">
+
+  <div class="brand simple-brand">
+    <div class="brand-name">
+      THANG MÁY ĐỨC ANH VIỆT NAM
+    </div>
+
+    <div class="docno">
+      NỘI DUNG BẢO TRÌ
+    </div>
+  </div>
+
+
+  <ul>
+
+    <li>
+      Kiểm tra mức dầu, chất lượng dầu trong hộp giảm tốc của thang máy có đủ không. Nếu không đủ phải đổ thêm vào
+    </li>
+
+    <li>
+      Kiểm tra độ kín khít của các cổ trục và tình trạng của cáp thép, puly.
+    </li>
+
+    <li>
+      Kiểm tra bộ hạn chế tốc độ, lẫy cơ và công tắc điện xem có sự cố hỏng hóc nào không.
+    </li>
+
+    <li>
+      Kiểm tra độ ẩm, nhiệt độ và mức độ thông thoáng của buồng thang máy xem chuẩn không.
+    </li>
+
+    <li>
+      Kiểm tra các ổ cắm, công tắc, đèn chiếu sáng của thang máy.
+    </li>
+
+    <li>
+      Kiểm tra cửa ra vào và khóa cửa có chắc chắn không.
+    </li>
+
+  </ul>
+
+
+  <p class="para">
+    <b><i>Bước 2: Kiểm tra giếng thang và phía bên trên cabin</i></b>
+  </p>
+
+
+  <ul>
+
+    <li>
+      Kiểm tra sự liên kết giữa công tắc với giá đỡ, giá đỡ ray.
+    </li>
+
+    <li>
+      Kiểm tra các bu lông ở chỗ nối ray có bị lỏng không và siết chặt lại.
+    </li>
+
+    <li>
+      Kiểm tra đầu treo cabin, đầu treo cáp đối trọng và ê cu khóa cáp có bị vấn đề gì không.
+    </li>
+
+    <li>
+      Kiểm tra độ căng của cáp thép xem đều không.
+    </li>
+
+    <li>
+      Kiểm tra liên kết giữa các bộ phận dừng tầng và gá; gá và ray có hoạt động chuẩn xác không.
+    </li>
+
+    <li>
+      Kiểm tra lượng dầu trong hộp cabin, hộp ray có đủ không. Chú ý xem nó có bị đóng cặn không để thay kịp thời.
+    </li>
+
+    <li>
+      Kiểm tra guốc trượt trên của cabin và đối trọng xem có bị hư hỏng gì không.
+    </li>
+
+    <li>
+      Kiểm tra các đệm cao su chống rung lắc cabin có bị hỏng không thì tiến hành thay thế ngay để đảm bảo an toàn cho người sử dụng.
+    </li>
+
+    <li>
+      Kiểm tra các công tắc hạn chế hành trình trên của thang máy còn hoạt động tốt không.
+    </li>
+
+    <li>
+      Kiểm tra quạt thông gió đặt trên nóc cabin, đèn chiếu sáng dọc giếng thang còn hoạt động không, nếu không hoạt động thì phải thay thế ngay.
+    </li>
+
+    <li>
+      Kiểm tra cáp treo quả đối trọng, khóa cửa tầng ở từng tầng xem hoạt động tốt không.
+    </li>
+
+    <li>
+      Kiểm tra khe hở của tầng và độ thẳng đứng của các cửa tầng, tiếp điện của các cửa tầng và cáp điện dọc giếng thang có gọn gàng không.
+    </li>
+
+  </ul>
+
+
+  <p class="para">
+    <b><i>Bước 3: Kiểm tra đáy giếng thang và phía bên dưới cabin</i></b>
+  </p>
+
+
+  <ul>
+
+    <li>
+      Tiến hành xem xét các công tắc hạn chế hành trình dưới.
+    </li>
+
+    <li>
+      Kiểm tra liên kết giữa công tắc và giá đỡ, giữa giá đỡ với ray.
+    </li>
+
+    <li>
+      Kiểm tra xem má phanh trái, má phanh phải ở dưới cabin có bị mòn không, có hoạt động tốt không.
+    </li>
+
+    <li>
+      Kiểm tra và điều chỉnh khe hở của má phanh khi không làm việc.
+    </li>
+
+    <li>
+      Kiểm tra guốc trượt dưới của cabin, đối trọng xem có hoạt động tốt không.
+    </li>
+
+    <li>
+      Kiểm tra chỗ treo và chỗ cố định cáp dẹt.
+    </li>
+
+    <li>
+      Xem kỹ công tắc bộ giảm chấn có bị lỏng ốc vít không thì siết chặt lại.
+    </li>
+
+    <li>
+      Kiểm tra công tắc và bộ gá công tác quá tải đồng thời siết lại các vít.
+    </li>
+
+    <li>
+      Kiểm tra công tắc và bộ căng cáp hạn chế hành trình, siết lại các ốc sao cho chặt.
+    </li>
+
+    <li>
+      Kiểm tra công tắc, ổ cắm và đèn ở đáy giếng thang.
+    </li>
+
+    <li>
+      Tiến hành vệ sinh hộp chứa dầu thừa ở bên dưới giếng thang và dọn dẹp khu vực đáy giếng thang sao cho sạch sẽ, khô giáo.
+    </li>
+
+  </ul>
+
+
+  <p class="para">
+    <b><i>Bước 4: Bảo trì bên trong cabin</i></b>
+  </p>
+
+  <ul>
+
+    <li>
+      Kiểm tra đèn chiếu sáng, điện thoại nội bộ, chuông cứu hộ có hoạt động tốt không.
+    </li>
+
+  </ul>
+
+
+  <div class="footer">
+    <span>THANG MÁY ĐỨC ANH VIỆT NAM</span>
+    <span>Trang 4</span>
+  </div>
+
+</div>
+
+
+
+<!-- =========================
+     TRANG 5
+========================= -->
+
+<div class="paper">
+
+  <div class="brand simple-brand">
+    <div class="brand-name">
+      THANG MÁY ĐỨC ANH VIỆT NAM
+    </div>
+
+    <div class="docno">
+      NỘI DUNG BẢO TRÌ
+    </div>
+  </div>
+
+
+  <ul>
+
+    <li>
+      Kiểm tra bảng điều khiển bên trong cabin có hoạt động tốt không.
+    </li>
+
+    <li>
+      Kiểm tra rãnh dẫn hướng và sensor an toàn của cửa cabin.
+    </li>
+
+  </ul>
+
+
+  <p class="para">
+    <b><i>Bước 5: Bảo trì, bảo dưỡng ngoài cửa tầng</i></b>
+  </p>
+
+
+  <ul>
+
+    <li>
+      Kiểm tra bảng điều khiển ở từng tầng xem có hoạt động tốt không.
+    </li>
+
+    <li>
+      Kiểm tra ray dẫn hướng ở từng tầng.
+    </li>
+
+    <li>
+      Kiểm tra khóa cửa tầng và khe hở cửa tầng.
+    </li>
+
+    <li>
+      Chạy thử thang máy để kiểm tra xem có sự cố nào xảy ra không.
+    </li>
+
+  </ul>
+
+
+  <p class="para">
+    <b>II. &nbsp; Các công việc bảo trì bảo dưỡng thang máy cần thực hiện định kỳ</b>
+  </p>
+
+  <p class="para">
+    <b><i>Những công việc bảo trì hằng tháng</i></b>
+  </p>
+
+
+  <ul>
+
+    <li>
+      Đối với thang máy có phòng máy thì cần phải khóa cửa chính và cửa sổ, kiểm tra đèn; kiểm tra xem phòng máy có bị thấm nước hay không.
+    </li>
+
+    <li>
+      Kiểm tra các thiết bị trong phòng máy như máy kéo, động cơ, dầu máy kéo, phanh điện từ, tủ điều khiển có bị lỗi hư hỏng nào không.
+    </li>
+
+    <li>
+      Kiểm tra xem trong buồng thang các thiết bị như; cửa, thanh safety shoes, các thiết bị khác có hoạt động tốt không.
+    </li>
+
+    <li>
+      Kiểm tra bảng điều khiển, hộp hiển thị báo cá tầng và báo chiều thang máy có còn hoạt động tốt không. Xem các vít định vị có chắc chắn không, các đèn báo có sáng không.
+    </li>
+
+    <li>
+      Kiểm tra đèn và các bulong bắt vách buồng thang máy có sáng và chắc chắn không.
+    </li>
+
+    <li>
+      Kiểm tra đèn E.Light có hoạt động không, độ sáng của bóng đèn có đủ không.
+    </li>
+
+    <li>
+      Kiểm tra điện thoại nội bộ có hoạt động không, có bị rè hay nhiễu không.
+    </li>
+
+    <li>
+      Kiểm tra cửa tầng có hoạt động không. Xem các nút tầng, đèn báo tầng, báo chiều có hoạt động không. Đồng thời vệ sinh bụi đất và cát bám trên sill ở cửa tầng.
+    </li>
+
+    <li>
+      Kiểm tra lau chùi các đèn báo ở bảng quan sát.
+    </li>
+
+    <li>
+      Kiểm tra đèn dọc hố thang, hộp đứng đầu xem cao hoạt động tốt không và vệ sinh sạch sẽ hố thang xem nó có bị thấm nước không.
+    </li>
+
+    <li>
+      Kiểm tra nóc buồng thang xem có bụi bẩn gì không thì vệ sinh và đổ thêm dầu bôi trơn rail.
+    </li>
+
+    <li>
+      Kiểm tra hệ thống door lock có hoạt động tốt không.
+    </li>
+
+    <li>
+      Kiểm tra các hộp giới hạn tốc độ xem có chính xác không.
+    </li>
+
+  </ul>
+
+
+  <p class="para">
+    <b><i>Các công việc bảo trì sau 6 tháng</i></b>
+  </p>
+
+
+  <ul>
+
+    <li>
+      Kiểm tra tủ điều khiển và các tủ phụ xem các thiết bị bên trong có còn hoạt động tốt không.
+    </li>
+
+    <li>
+      Kiểm tra phanh điện tử có hoạt động tốt không bằng cách vệ sinh, lau dầu mỡ bôi trơn cho các trục, cốt phanh. Kiểm tra lực hút phanh có đạt hiệu quả không và kiểm tra các dây nối.
+    </li>
+
+    <li>
+      Kiểm tra các tiếp điểm, búa văng, poulie rồi dùng máy bơm mỡ khí nén tra mỡ bôi trơn cho những điểm cần thiết trong bộ governor.
+    </li>
+
+    <li>
+      Kiểm tra các thiết bị của cửa cabin như bánh xe treo cửa, bánh xe cable, các đầu nối cable và rail cửa xem có hoạt động tốt không. Kiểm tra hộp gate, cam đè hộp gate, bánh xe hộp gate, kiếm cửa, poulie và dây curoa cửa để đảm bảo cửa thang máy hoạt động tốt.
+    </li>
+
+  </ul>
+
+
+  <div class="footer">
+    <span>THANG MÁY ĐỨC ANH VIỆT NAM</span>
+    <span>Trang 5</span>
+  </div>
+
+</div>
+
+
+
+<!-- =========================
+     TRANG 6
+========================= -->
+
+<div class="paper">
+
+  <div class="brand simple-brand">
+    <div class="brand-name">
+      THANG MÁY ĐỨC ANH VIỆT NAM
+    </div>
+
+    <div class="docno">
+      NỘI DUNG BẢO TRÌ
+    </div>
+  </div>
+
+
+  <p class="para">
+    <b><i>Các công việc bảo dưỡng cần làm sau 12 tháng</i></b>
+  </p>
+
+
+  <ul>
+
+    <li>
+      Vệ sinh toàn bộ thang máy.
+    </li>
+
+    <li>
+      Kiểm tra các khớp nối, bạc đạn, poulie, hộp đấu dây, chặn cable của máy kéo xem còn hoạt động tốt không. Kiểm tra xem máy kéo có bị rò rỉ dầu không; động cơ có tiếng ồn bất thường gì không.
+    </li>
+
+    <li>
+      Kiểm tra dây dẫn điện, đệm đàn hồi, nắp hộp bảo vệ của bộ encoder. Xem kỹ tiếng ồn khi hoạt động của nó.
+    </li>
+
+    <li>
+      Kiểm tra khoảng cách của kiếm cửa và bánh xe Door lock; khoảng cách giữa kiếm và sill cửa tầng; các phần nhô ra khác của cửa tầng xem đủ an toàn không.
+    </li>
+
+    <li>
+      Kiểm tra kỹ các bộ phận của phanh điện tử và má phanh xem có hư hỏng gì không.
+    </li>
+
+    <li>
+      Kiểm tra thanh Safety Shoes có di chuyển tốt không, có phát ra tiếng động lạ nào không. Kiểm tra các ốc vít định vị và tra mỡ bôi trơn vào các vòng bi, ổ trục truyền động và các đầu nối.
+    </li>
+
+    <li>
+      Kiểm tra các miếng cao su chặn giới hạn ở cửa tầng có bị mòn, bị hỏng không thì cần phải thay ngay.
+    </li>
+
+    <li>
+      Kiểm tra xem photocell và cảm biến cửa có nhạy không.
+    </li>
+
+    <li>
+      Kiểm tra các móng ngựa có nhạy không.
+    </li>
+
+    <li>
+      Kiểm tra xem shoes cabin và đối trọng có tiếng kêu gì không. Có bị mòn ở mặt tiếp xúc với rail và vệ sinh sạch sẽ, bôi trơn dầu mỡ.
+    </li>
+
+    <li>
+      Kiểm tra xem cable tải có độ căng đều không, có bị rỉ sét hay mòn không.
+    </li>
+
+    <li>
+      Kiểm tra máng điện và hộp nối dây xem có bị hư hỏng gì không và tiến hành sửa chữa ngay.
+    </li>
+
+    <li>
+      Kiểm tra công tắc cabin, công tắc chạy tay xem có bị trục trặc gì không.
+    </li>
+
+    <li>
+      Kiểm tra các công tắc ở hố thang; các thiết bị trên đầu và dưới đáy cabin xem còn hoạt tốt không.
+    </li>
+
+    <li>
+      Kiểm tra bộ phận phanh an toàn xem có hoạt động tốt không.
+    </li>
+
+    <li>
+      Kiểm tra các hộp dầu bôi trơn, hộp giới hạn, quạt thông gió có còn tốt không.
+    </li>
+
+    <li>
+      Kiểm tra định vị 2 đầu và ở giữa của dây travelling cable xem có chắc chắn không. Ngoài ra còn kiểm tra độ chai cứng của vỏ cable, độ võng của đáy thang và các đầu nối.
+    </li>
+
+  </ul>
+
+
+  <div class="footer">
+    <span>THANG MÁY ĐỨC ANH VIỆT NAM</span>
+    <span>Trang 6</span>
+  </div>
+
+</div>
+
+
+
+<!-- =========================
+     TRANG 7
+========================= -->
+
+<div class="paper">
+
+  <div class="brand simple-brand">
+    <div class="brand-name">
+      THANG MÁY ĐỨC ANH VIỆT NAM
+    </div>
+
+    <div class="docno">
+      THÔNG SỐ KỸ THUẬT THANG MÁY
+    </div>
+  </div>
+
+
+  <h2>
+    THÔNG SỐ KỸ THUẬT THANG MÁY
+  </h2>
+
+
+  <table>
+
+    <tr>
+      <th>Tên thang</th>
+
+      <th>
+        <input
+          class="center"
+          value="Thang máy tải khách DAE"
+        >
+      </th>
+    </tr>
+
+
+    <tr>
+      <td
+        class="section"
+        colspan="2"
+      >
+        1. Các thông số chung :
+      </td>
+    </tr>
+
+
+    <tr>
+      <td class="label">Mã hiệu</td>
+      <td><input value="Thang Không Phòng Máy – DAE – P450"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Số lượng</td>
+      <td><input value="01"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Tốc độ (m/s)</td>
+      <td><input value="1"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Tải trọng (Kg)</td>
+      <td><input value="450"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Số điểm dừng / Số tầng</td>
+      <td><input value="4/4"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Tầng phục vụ mặt trước</td>
+      <td><input value="1,2,3,4"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Tầng phục vụ mặt sau</td>
+      <td><input value="Không có"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Tầng phục vụ bên hông</td>
+      <td><input value="Không có"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Nhóm điều khiển</td>
+      <td><input value="Điều khiển Simple"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Vị trí phòng máy</td>
+      <td><input value="Không phòng máy"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Hành trình</td>
+      <td><input value="Theo thực tế"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Động cơ/Công suất</td>
+      <td><input value="Torin / 3.3 KW"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Tủ điện/ Công suất</td>
+      <td><input value="STEP / 7.5 KW"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Nguồn điện</td>
+
+      <td>
+        <textarea> Nguồn điện chính: 3 phase 380V (±10%) 50±1 Hz
+Nguồn chiếu sáng: 1 Phase 220V (±10%) 50±1 Hz</textarea>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="label">Tiêu chuẩn an toàn</td>
+      <td><input value="TCVN 6395: 2008"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Năm sản xuất</td>
+      <td><input value="2026 Trở về sau"></td>
+    </tr>
+
+
+    <tr>
+      <td
+        class="section"
+        colspan="2"
+      >
+        2. Thông số kích thước :
+      </td>
+    </tr>
+
+
+    <tr>
+      <td class="label">Kích thước cabin (AA x BB x H) mm</td>
+      <td><input value="900 x 1100 x 2400"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Kích thước cửa cabin (LL x H) mm</td>
+      <td><input value="600 x 2100"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Kiểu mở cửa</td>
+      <td><input value="CO – HAI CÁNH TIM"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Kích thước hố thang (AH x BH) mm</td>
+      <td><input value="1300 X 1700(Kích thước thông thuỷ)"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Độ âm Pit – PH(mm)</td>
+      <td><input value="1200"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Độ cao đỉnh – OH (mm)</td>
+      <td><input value="3200"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Chiều vị trí đặt máy (mm)</td>
+      <td><input value="1200"></td>
+    </tr>
+
+
+    <tr>
+      <td
+        class="section"
+        colspan="2"
+      >
+        3. Thiết kế nội thất thang :
+      </td>
+    </tr>
+
+
+    <tr>
+      <td class="label">Trần phòng thang</td>
+      <td><input value="Inox gương cao cấp và meka đài loan (inox 304)"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Đèn chiếu sáng</td>
+      <td><input value="Đèn LED chiếu sáng trực tiếp từ trần cabin"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Vật liệu vách trước</td>
+      <td><input value="Inox gương cao cấp inox 304 dày 1,2 mm"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Vật liệu vách bên phải</td>
+      <td><input value="Tấm kính cường lực nẹp inox gương vàng hồng(inox 304) dày 1,2 mm"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Vật liệu vách bên trái</td>
+      <td><input value="Tấm kính cường lực nẹp inox gương vàng hồng(inox 304) dày 1,2 mm"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Vật liệu vách sau</td>
+      <td><input value="Inox gương lớn ở giữa sen inox gương vàng 2 bên (inox 304) dày 1,2mm"></td>
+    </tr>
+
+  </table>
+
+
+  <div class="footer">
+    <span>THANG MÁY ĐỨC ANH VIỆT NAM</span>
+    <span>Trang 7</span>
+  </div>
+
+</div>
+
+
+
+<!-- =========================
+     TRANG 8
+========================= -->
+
+<div class="paper">
+
+  <div class="brand simple-brand">
+
+    <div class="brand-name">
+      THANG MÁY ĐỨC ANH VIỆT NAM
+    </div>
+
+    <div class="docno">
+      THÔNG SỐ KỸ THUẬT
+    </div>
+
+  </div>
+
+
+  <table>
+
+    <tr>
+      <td class="label">Viền chân vách</td>
+      <td><input value="Inox gương cao cấp (inox 304) dày 1,2 mm"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Cửa Cabin</td>
+      <td><input value="Cửa Kính cường lực, bo viền Inox 304 gương vàng hồng dày 1.2mm."></td>
+    </tr>
+
+
+    <tr>
+      <td class="center" rowspan="7">
+        <b><i>Bảng điều khiển trong cabin COP</i></b>
+      </td>
+
+      <td class="label">Mã hiệu</td>
+
+      <td>
+        <input value="DA – GSX , 01 bảng/thang">
+      </td>
+    </tr>
+
+    <tr>
+      <td class="label">Vật liệu</td>
+      <td><input value="Inox gương và ăn mòn ở giữa , bề mặt meka cao cấp"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Vị trí</td>
+      <td><input value="Vách bên phòng thang"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Nút bấm</td>
+      <td><input value="Nút tròn"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Hiển trị trên COP</td>
+      <td><input value="Đi theo thang"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Hiển thị vị trí và chiều thang hoạt động</td>
+      <td><input value="Hiển thị vị trí và chiều thang hoạt động"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Biển báo tải trọng thang</td>
+      <td><input value="Inox cao cấp khác laze gắn trong cabin"></td>
+    </tr>
+
+
+    <tr>
+      <td class="center" rowspan="4">
+        <b><i>Tiện nghi khác</i></b>
+      </td>
+
+      <td class="label">Tay vịn</td>
+
+      <td>
+        <input value="Tay vịn tròn mã hiệu DA-001, hoàn thiện inox gương, gắn tại 2 vách">
+      </td>
+    </tr>
+
+    <tr>
+      <td class="label">Sàn phòng thang</td>
+      <td><input value="Sàn đá granit theo mẫu có sẵn"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Thông gió trong cabin</td>
+      <td><input value="Quạt trên trần cabin hướng gió xuống dưới"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Ngưỡng cửa cabin</td>
+      <td><input value="Nhôm cứng định hình đi theo bộ đầu cửa"></td>
+    </tr>
+
+
+    <tr>
+      <td
+        class="section"
+        colspan="3"
+      >
+        4. Thiết kế cửa tầng :
+      </td>
+    </tr>
+
+
+    <tr>
+      <td class="center" rowspan="8">
+        <b>Tầng chính<br>(Tầng 1)</b>
+      </td>
+
+      <td class="label">Vật liệu cửa tầng</td>
+
+      <td>
+        <input value="Cửa Kính cường lực, bo viền Inox 304 gương dày 1.2mm.">
+      </td>
+    </tr>
+
+    <tr>
+      <td class="label">Ngưỡng cửa tầng</td>
+      <td><input value="Nhôm cứng định hình"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Khung bao tầng chính (Kiểu/vật liệu)</td>
+      <td><input value="Bản rộng Inox gương vàng hồng (inox 304) dày 1,2 mm"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Bảng gọi tầng/kiểu</td>
+      <td><input value="DA – GSX, có đế âm, bảng đơn"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Loại bảng gọi</td>
+      <td><input value="Bảng gọi tầng kết hợp mặt hiển thị"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Vật liệu bảng gọi</td>
+      <td><input value="Inox gương và ăn mòn ở giữa, bề mặt meka cao cấp"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Nút nhấn</td>
+      <td><input value="Nút tròn, gắn nổi"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Hiển thị trên bảng gọi</td>
+      <td><input value="Hiển thị DotMatrix"></td>
+    </tr>
+
+
+    <tr>
+      <td class="center" rowspan="7">
+        <b>Các tầng<br>khác</b>
+      </td>
+
+      <td class="label">Vật liệu cửa tầng</td>
+      <td><input value="Cửa Kính cường lực, bo viền Inox 304 gương dày 1.2mm."></td>
+    </tr>
+
+    <tr>
+      <td class="label">Ngưỡng cửa tầng</td>
+      <td><input value="Nhôm cứng định hình"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Khung bao tầng khác (Kiểu/vật liệu)</td>
+      <td><input value="Bản hẹp inox gương vàng hồng(inox 304) dày 1,2 mm"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Bảng gọi tầng/kiểu</td>
+      <td><input value="DA – GSX, có đế âm, bảng đơn"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Loại bảng gọi</td>
+      <td><input value="Bảng gọi tầng kết hợp mặt hiển thị"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Vật liệu bảng gọi</td>
+      <td><input value="Inox gương và ăn mòn ở giữa, bề mặt meka cao cấp"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Nút nhấn</td>
+      <td><input value="Nút tròn gọi tầng, gắn nổi, nhập Hàn Quốc"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Hiển thị trên bảng gọi</td>
+      <td><input value="Hiển thị DotMatrix"></td>
+    </tr>
+
+
+    <tr>
+      <td class="center" rowspan="2">
+        <b>Vật tư khác</b>
+      </td>
+
+      <td class="label">Rail cabin</td>
+
+      <td>
+        <input value="T78 + 8K tiêu chuẩn Iso 07465 – 2007 . China">
+      </td>
+    </tr>
+
+    <tr>
+      <td class="label">Rail đối trọng</td>
+
+      <td>
+        <input value="T78 + 8K tiêu chuẩn Iso 07465 – 2007 . China">
+      </td>
+    </tr>
+
+  </table>
+
+
+  <div class="footer">
+    <span>THANG MÁY ĐỨC ANH VIỆT NAM</span>
+    <span>Trang 8</span>
+  </div>
+
+</div>
+
+
+
+<!-- =========================
+     TRANG 9
+========================= -->
+
+<div class="paper">
+
+  <div class="brand simple-brand">
+
+    <div class="brand-name">
+      THANG MÁY ĐỨC ANH VIỆT NAM
+    </div>
+
+    <div class="docno">
+      THÔNG SỐ KỸ THUẬT
+    </div>
+
+  </div>
+
+
+  <table>
+
+    <tr>
+      <td class="label">Cable tải</td>
+      <td><input value="China"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Poid đối trọng / vị trí</td>
+      <td><input value="Bằng bê tông đặt đằng sau"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Cable điện theo cabin</td>
+      <td><input value="Vemas"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Đầu cửa cabin</td>
+      <td><input value="Ningbo – China mới 100%"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Đầu cửa tầng</td>
+      <td><input value="Ningbo – China mới 100%"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Motor đầu cửa</td>
+      <td><input value="Motor cửa đồng bộ theo bộ truyền"></td>
+    </tr>
+
+    <tr>
+      <td class="label">Hệ điều khiển</td>
+
+      <td>
+        <textarea>Điều khiển VVVF điều khiển tốc độ vô cấp bằng hệ thống thay đổi điện áp và tần số giúp cửa thang máy được đóng mở nhẹ nhàng và êm ái</textarea>
+      </td>
+
+    </tr>
+
+  </table>
+
+
+  <div class="sign">
+
+    <div>
+      <b>
+        ĐẠI DIỆN THANG MÁY ĐỨC ANH VIỆT NAM
+      </b>
+
+      <div class="sign-space"></div>
+    </div>
+
+
+    <div>
+      <b>
+        KHÁCH HÀNG
+      </b>
+
+      <div class="sign-space"></div>
+    </div>
+
+  </div>
+
+
+  <div class="footer">
+    <span>THANG MÁY ĐỨC ANH VIỆT NAM</span>
+    <span>Trang 9</span>
+  </div>
+
+</div>
+
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
