@@ -1,105 +1,92 @@
 :root{
   --yellow:#f4b400;
-  --yellow-dark:#d99b00;
+  --yellow2:#ffc928;
   --black:#111111;
   --ink:#20252a;
   --muted:#68717a;
-  --line:#d5d9dd;
+  --line:#c7cdd2;
   --soft:#fff8dc;
-  --paper:#ffffff;
 }
 
 *{
   box-sizing:border-box;
 }
 
-html{
+html,
+body{
   margin:0;
   padding:0;
 }
 
 body{
-  margin:0;
-  background:#eef1f3;
+  background:#edf0f2;
   color:var(--ink);
   font-family:Arial,Helvetica,sans-serif;
 }
 
 /* =========================================================
-   TOOLBAR
+   THANH CÔNG CỤ
 ========================================================= */
 
 .toolbar{
   position:sticky;
   top:0;
-  z-index:100;
-  background:#fff;
-  border-bottom:1px solid #d8dde2;
-  padding:10px 14px;
+  z-index:1000;
   display:flex;
   align-items:center;
-  gap:10px;
+  gap:9px;
   flex-wrap:wrap;
+  padding:10px 14px;
+  background:#fff;
+  border-bottom:1px solid #d7dce0;
   box-shadow:0 3px 12px #00000012;
 }
 
 .toolbar strong{
-  margin-right:auto;
-  color:var(--black);
-  font-size:18px;
-  font-weight:800;
-  border-left:5px solid var(--yellow);
+  flex:1 1 auto;
+  min-width:240px;
   padding-left:10px;
+  border-left:5px solid var(--yellow);
+  color:#111;
+  font-size:17px;
+  font-weight:800;
 }
 
 button{
   border:0;
-  border-radius:9px;
-  padding:11px 17px;
-  font-weight:800;
-  font-size:14px;
-  cursor:pointer;
-  background:var(--black);
+  border-radius:8px;
+  padding:11px 16px;
+  background:#111;
   color:#fff;
+  font-size:14px;
+  font-weight:800;
+  cursor:pointer;
 }
 
 button.secondary{
-  background:#fff8d9;
+  background:#fff7d7;
   color:#493900;
-  border:1px solid #e5b932;
+  border:1px solid #e1b72d;
 }
 
 button.danger{
-  background:#fff2f2;
-  color:#a52020;
-  border:1px solid #efc6c6;
-}
-
-button:active{
-  transform:translateY(1px);
+  background:#fff1f1;
+  color:#a52222;
+  border:1px solid #efc5c5;
 }
 
 /* =========================================================
-   A4 PAPER
+   KHỔ A4 TRÊN MÀN HÌNH
 ========================================================= */
 
 .paper{
+  position:relative;
   width:210mm;
-  height:297mm;
   min-height:297mm;
   margin:18px auto;
-  background:var(--paper);
-  position:relative;
-  padding:13mm 14mm 15mm;
+  padding:11mm 12mm 16mm;
+  background:#fff;
   box-shadow:0 4px 22px #00000018;
-  overflow:hidden;
-  page-break-after:always;
-  break-after:page;
-}
-
-.paper:last-child{
-  page-break-after:auto;
-  break-after:auto;
 }
 
 /* =========================================================
@@ -110,330 +97,285 @@ button:active{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:15px;
-  min-height:24mm;
-  padding-bottom:7px;
+  gap:12px;
+  min-height:19mm;
+  margin-bottom:8mm;
+  padding-bottom:6px;
   border-bottom:3px solid var(--yellow);
-  margin-bottom:10mm;
 }
 
 .brand-left{
   display:flex;
   align-items:center;
-  gap:12px;
+  gap:11px;
   min-width:0;
 }
 
 .brand-logo{
-  flex:0 0 19mm;
-  width:19mm;
-  height:19mm;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-.brand-logo img{
-  width:100%;
-  height:100%;
+  flex:0 0 18mm;
+  width:18mm;
+  height:18mm;
   object-fit:contain;
   display:block;
 }
 
 .brand-name{
-  font-size:21px;
-  line-height:1.15;
+  color:#111;
+  font-size:20px;
+  line-height:1.12;
   font-weight:900;
-  letter-spacing:.5px;
-  color:var(--black);
+  letter-spacing:.6px;
 }
 
 .brand-sub{
   margin-top:3px;
-  font-size:9px;
+  color:#606a73;
+  font-size:8.5px;
   line-height:1.2;
-  color:#59636c;
-  letter-spacing:.5px;
+  letter-spacing:.45px;
 }
 
 .company-meta{
-  margin-top:4px;
-  font-size:8px;
-  line-height:1.3;
-  color:#737d85;
+  margin-top:3px;
+  color:#747d85;
+  font-size:7px;
+  line-height:1.25;
 }
 
 .docno{
   flex:0 0 auto;
-  font-size:11px;
   color:#555;
+  font-size:10px;
   text-align:right;
   white-space:nowrap;
 }
 
 .input-sm{
+  display:inline-block;
   width:105px !important;
-  display:inline-block !important;
 }
 
 /* =========================================================
-   COVER PAGE
+   TRANG BÌA
 ========================================================= */
 
-.cover-title{
-  margin:7mm 0 6mm;
-  text-align:center;
-  font-size:29px;
-  line-height:1.15;
-  font-weight:900;
-  letter-spacing:1px;
-  color:#151c21;
-}
-
-/* ảnh cover */
-
 .cover-visual{
-  width:82mm;
-  height:50mm;
-  margin:2mm auto 5mm;
+  width:78mm;
+  height:46mm;
+  margin:2mm auto 4mm;
   overflow:hidden;
+  border:1px solid #d5d5d5;
   border-radius:5px;
-  border:1px solid #d7d7d7;
-  box-shadow:0 7px 20px #00000016;
-  background:#f4f4f4;
+  background:#f5f5f5;
+  box-shadow:0 6px 18px #00000014;
 }
 
 .cover-visual img{
+  display:block;
   width:100%;
   height:100%;
-  display:block;
   object-fit:cover;
 }
 
-/* watermark */
-
-.watermark{
-  position:absolute;
-  left:50%;
-  top:55%;
-  transform:translate(-50%,-50%) rotate(-35deg);
-  font-size:31px;
-  line-height:1;
+.cover-title{
+  margin:4mm 0 5mm;
+  color:#171e23;
+  font-size:26px;
+  line-height:1.15;
   font-weight:900;
-  color:#f4b40012;
-  white-space:nowrap;
-  pointer-events:none;
-  z-index:0;
+  letter-spacing:.7px;
+  text-align:center;
 }
-
-/* thông tin công trình */
 
 .cover-grid{
   position:relative;
   z-index:2;
   width:100%;
-  max-width:142mm;
-  margin:0 auto;
-  padding:0;
+  max-width:145mm;
+  margin:5mm auto 0;
+  text-align:center;
 }
 
 .cover-grid .row{
-  width:100%;
-  min-height:11mm;
-  margin:2.5mm 0;
   display:flex;
   align-items:center;
   justify-content:center;
   gap:7px;
-  font-size:15px;
-  line-height:1.25;
-}
-
-.cover-grid .row b{
-  flex:0 0 auto;
-  font-weight:800;
+  min-height:9mm;
+  margin:2mm 0;
+  font-size:14px;
+  line-height:1.2;
 }
 
 .cover-grid .row.main{
-  font-size:17px;
+  font-size:15.5px;
   font-weight:800;
 }
-
-/*
-  Ghi đè toàn bộ width inline trong HTML.
-  Đây là phần sửa lỗi ô nhập bị cắt.
-*/
 
 .cover-grid input{
-  width:auto !important;
+  display:inline-block;
+  width:auto;
   max-width:100%;
   min-width:0;
-  height:9mm;
-  padding:5px 9px;
-  border:1px solid #d7ad29;
-  border-radius:5px;
-  background:#fffdf3;
+  height:8mm;
+  padding:3px 7px;
+  border:1px solid #d5ad31;
+  border-radius:4px;
+  background:#fffdf0;
   color:#111;
-  font-size:15px;
-  font-weight:500;
 }
 
-.cover-grid .main input{
-  font-size:17px;
-  font-weight:800;
-}
-
-/* từng ô */
-
-#congTrinh{
-  width:62mm !important;
-}
-
-#diaChi{
+.cover-grid #congTrinh{
   width:58mm !important;
 }
 
-#loaiThang{
-  width:52mm !important;
-}
-
-#hieuThang{
-  width:70mm !important;
-}
-
-#load{
-  width:76mm !important;
-}
-
-#soLuong{
-  width:43mm !important;
-}
-
-#thang{
+.cover-grid #diaChi{
   width:55mm !important;
 }
 
-/* số báo giá */
-
-#soCover{
-  font-weight:700;
+.cover-grid #loaiThang{
+  width:48mm !important;
 }
 
-/* ngày tháng */
+.cover-grid #hieuThang{
+  width:65mm !important;
+}
+
+.cover-grid #load{
+  width:70mm !important;
+}
+
+.cover-grid #soLuong{
+  width:40mm !important;
+}
 
 .cover-bottom{
-  position:absolute;
-  left:14mm;
-  right:14mm;
-  bottom:19mm;
   display:flex;
   justify-content:center;
   align-items:center;
-  z-index:3;
+  margin-top:6mm;
 }
 
 .cover-bottom input{
-  font-size:15px;
+  width:52mm !important;
+  text-align:center;
   font-weight:800;
 }
 
+.watermark{
+  position:absolute;
+  left:50%;
+  top:53%;
+  z-index:0;
+  transform:translate(-50%,-50%) rotate(-35deg);
+  color:#f4b40012;
+  font-size:36px;
+  font-weight:900;
+  line-height:1;
+  white-space:nowrap;
+  pointer-events:none;
+}
+
 /* =========================================================
-   TITLES
+   TIÊU ĐỀ
 ========================================================= */
 
 h1{
+  color:#172026;
+  font-size:24px;
   text-align:center;
-  font-size:25px;
-  margin:10px 0;
 }
 
 h2{
+  margin:0 0 8px;
+  color:#20262b;
+  font-size:17px;
   text-align:center;
-  font-size:18px;
-  margin:0 0 10px;
 }
 
 h3{
-  font-size:14px;
-  line-height:1.3;
-  margin:10px 0 7px;
-  color:var(--black);
+  margin:9px 0 6px;
+  padding:6px 8px;
   border-left:4px solid var(--yellow);
-  padding:7px 9px;
   background:linear-gradient(
     90deg,
-    #fff9df 0%,
-    #fffdf5 70%,
+    #fff8dc 0%,
+    #fffdf5 65%,
     transparent 100%
   );
+  color:#111;
+  font-size:14px;
+  line-height:1.25;
 }
 
 /* =========================================================
-   TABLE
+   BẢNG
 ========================================================= */
 
 table{
   width:100%;
   border-collapse:collapse;
   table-layout:fixed;
-  font-size:10.5px;
+  font-size:9.5px;
 }
 
 th,
 td{
-  border:1px solid #b9c0c6;
-  padding:5px 6px;
+  padding:3px 4px;
+  border:1px solid #adb6bd;
   vertical-align:middle;
+  line-height:1.15;
   overflow-wrap:anywhere;
 }
 
 th{
-  background:#fff7d2;
-  color:#151515;
+  background:var(--soft);
+  color:#111;
   font-weight:800;
 }
 
-.label{
-  width:40%;
+td.label{
+  width:43%;
   font-weight:700;
 }
 
 .section{
-  background:var(--black) !important;
+  background:#111 !important;
   color:#fff !important;
-  font-weight:900;
   border-left:4px solid var(--yellow) !important;
+  font-weight:900;
 }
 
 .price td{
-  font-size:12px;
+  font-size:11px;
   font-weight:800;
-}
-
-.right{
-  text-align:right;
 }
 
 .center{
   text-align:center;
 }
 
+.right{
+  text-align:right;
+}
+
 /* =========================================================
-   INPUTS
+   Ô NHẬP
 ========================================================= */
 
 input,
 textarea,
 select,
 .editable{
-  font:inherit;
+  width:100%;
+  min-width:0;
+  max-width:100%;
+  padding:3px 5px;
   border:1px solid #d6b43a;
   border-radius:4px;
-  padding:4px 6px;
   background:#fffdf0;
   color:#111;
-  width:100%;
-  max-width:100%;
+  font:inherit;
 }
 
 input:focus,
@@ -444,45 +386,50 @@ select:focus{
 }
 
 textarea{
+  min-height:38px;
   resize:vertical;
-  min-height:45px;
 }
 
 input.num{
   text-align:right;
 }
 
+.editable{
+  display:inline-block;
+  min-width:45px;
+}
+
 /* =========================================================
-   TEXT
+   NỘI DUNG
 ========================================================= */
 
 .note{
-  font-size:10.5px;
-  line-height:1.45;
-  margin:7px 0;
+  margin:4px 0;
+  font-size:9.2px;
+  line-height:1.28;
 }
 
 .para{
-  font-size:10.5px;
-  line-height:1.42;
-  margin:6px 0;
+  margin:3px 0;
+  font-size:9.4px;
+  line-height:1.28;
 }
 
 ul{
-  margin:5px 0 7px 18px;
+  margin:3px 0 5px 17px;
   padding:0;
 }
 
 li{
-  font-size:10.3px;
-  line-height:1.38;
-  margin:2px 0;
+  margin:1px 0;
+  font-size:9.1px;
+  line-height:1.24;
 }
 
 .hint{
-  font-size:9px;
-  color:#6b7280;
-  margin:5px 0 10px;
+  margin:4px 0 8px;
+  color:#68717a;
+  font-size:8.5px;
 }
 
 .mono{
@@ -490,20 +437,20 @@ li{
 }
 
 /* =========================================================
-   SIGNATURE
+   CHỮ KÝ
 ========================================================= */
 
 .sign{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:35px;
+  margin-top:18px;
   text-align:center;
-  margin-top:25px;
-  font-size:10.5px;
+  font-size:10px;
 }
 
 .sign-space{
-  height:48px;
+  height:40px;
 }
 
 /* =========================================================
@@ -512,97 +459,81 @@ li{
 
 .footer{
   position:absolute;
-  left:14mm;
-  right:14mm;
+  right:12mm;
   bottom:7mm;
-  border-top:3px solid var(--yellow);
-  padding-top:4px;
-  font-size:8.5px;
-  color:#202020;
+  left:12mm;
   display:flex;
   justify-content:space-between;
+  padding-top:3px;
+  border-top:2px solid var(--yellow);
+  color:#222;
+  font-size:8px;
 }
 
 /* =========================================================
-   MOBILE / IPAD
+   IPAD / MOBILE
 ========================================================= */
 
 @media(max-width:900px){
 
   body{
-    background:#eef1f3;
+    background:#edf0f2;
   }
 
   .toolbar{
     position:static;
-    padding:10px 12px;
+    padding:9px 12px;
   }
 
   .toolbar strong{
     width:100%;
-    margin:0 0 2px;
+    flex:none;
     font-size:16px;
   }
 
-  .toolbar button{
-    flex:0 0 auto;
-  }
-
-  /*
-    Hiển thị giấy như một trang tài liệu,
-    không ép nội dung tràn ngang màn hình.
-  */
-
   .paper{
     width:100%;
-    height:auto;
     min-height:0;
     margin:10px 0;
-    padding:20px 18px 55px;
-    overflow:hidden;
-    box-shadow:0 2px 12px #00000014;
+    padding:18px 18px 45px;
+    box-shadow:0 2px 12px #00000012;
   }
 
   .brand{
-    min-height:auto;
-    margin-bottom:28px;
-    padding-bottom:9px;
+    align-items:flex-start;
   }
 
   .brand-logo{
-    width:58px;
-    height:58px;
-    flex-basis:58px;
+    width:55px;
+    height:55px;
+    flex-basis:55px;
   }
 
   .brand-name{
-    font-size:18px;
+    font-size:17px;
   }
 
   .brand-sub{
-    font-size:8px;
-  }
-
-  .company-meta{
     font-size:7.5px;
   }
 
-  .docno{
-    font-size:10px;
+  .company-meta{
+    font-size:7px;
+    white-space:normal;
   }
 
-  /* COVER */
+  .docno{
+    font-size:9px;
+  }
 
   .cover-visual{
-    width:min(82mm,72vw);
+    width:min(78mm,72vw);
     height:auto;
-    aspect-ratio:82 / 50;
-    margin:0 auto 18px;
+    aspect-ratio:78 / 46;
   }
 
   .cover-title{
-    font-size:27px;
-    margin:14px 0 18px;
+    font-size:25px;
   }
 
   .cover-grid{
@@ -612,140 +543,43 @@ li{
   .cover-grid .row,
   .cover-grid .row.main{
     display:grid;
-    grid-template-columns:92px minmax(0,1fr);
+    grid-template-columns:88px minmax(0,1fr);
+    gap:7px;
     justify-content:stretch;
-    align-items:center;
     text-align:right;
-    gap:8px;
-    min-height:42px;
-    margin:5px 0;
-    font-size:15px;
+    font-size:14px;
   }
 
   .cover-grid .row b{
     text-align:right;
   }
 
-  .cover-grid input,
-  .cover-grid .main input{
+  .cover-grid input{
     width:100% !important;
     min-width:0;
-    font-size:15px;
-    font-weight:500;
-  }
-
-  .cover-grid .main input{
-    font-weight:800;
+    font-size:14px;
   }
 
   .cover-bottom{
-    position:static;
-    margin-top:28px;
-  }
-
-  .cover-bottom input{
-    width:150px !important;
-  }
-
-  .watermark{
-    font-size:23px;
-  }
-
-  table{
-    font-size:10px;
-  }
-
-  th,
-  td{
-    padding:5px 4px;
-  }
-
-  .note,
-  .para{
-    font-size:10px;
-  }
-
-  li{
-    font-size:9.8px;
+    margin-top:20px;
   }
 
   .footer{
     position:static;
-    margin-top:30px;
+    margin-top:25px;
   }
 }
 
 /* =========================================================
-   SMALL PHONE
+   IN
 ========================================================= */
-
-@media(max-width:480px){
-
-  .toolbar button{
-    padding:10px 12px;
-    font-size:13px;
-  }
-
-  .brand{
-    align-items:flex-start;
-  }
-
-  .brand-left{
-    gap:8px;
-  }
-
-  .brand-logo{
-    width:48px;
-    height:48px;
-    flex-basis:48px;
-  }
-
-  .brand-name{
-    font-size:15px;
-  }
-
-  .brand-sub{
-    font-size:7px;
-  }
-
-  .company-meta{
-    font-size:6.8px;
-  }
-
-  .docno{
-    font-size:9px;
-  }
-
-  .input-sm{
-    width:88px !important;
-  }
-
-  .cover-title{
-    font-size:23px;
-  }
-
-  .cover-grid .row,
-  .cover-grid .row.main{
-    grid-template-columns:82px minmax(0,1fr);
-    font-size:14px;
-  }
-
-  .cover-grid input,
-  .cover-grid .main input{
-    font-size:14px;
-  }
-}
-
-/* =========================================================
-   PRINT / PDF
-========================================================= */
-
-@page{
-  size:A4;
-  margin:0;
-}
 
 @media print{
+
+  @page{
+    size:A4;
+    margin:0;
+  }
 
   html,
   body{
@@ -755,64 +589,60 @@ li{
     background:#fff !important;
   }
 
+  body{
+    color:#111;
+  }
+
   .toolbar{
     display:none !important;
   }
 
-  .paper{
-    width:210mm !important;
-    height:297mm !important;
-    min-height:297mm !important;
-    margin:0 !important;
-    padding:13mm 14mm 15mm !important;
-    box-shadow:none !important;
-    overflow:hidden !important;
-    page-break-after:always;
-    break-after:page;
-  }
-
-  .paper:last-child{
-    page-break-after:auto;
-    break-after:auto;
-  }
-
   /*
-    Khi in, bỏ viền ô nhập để báo giá trông
-    như tài liệu hoàn chỉnh.
+    ĐÂY LÀ PHẦN QUAN TRỌNG NHẤT.
+
+    Không dùng:
+      height:297mm
+      overflow:hidden
+      page-break-after:always
+
+    Nội dung được phép chảy tự nhiên.
   */
 
-  input,
-  textarea,
-  select,
-  .editable{
-    border:0 !important;
-    background:transparent !important;
-    outline:none !important;
-    padding:0 !important;
-    appearance:none !important;
-    -webkit-appearance:none !important;
-  }
+  .paper{
+    width:210mm !important;
+    min-height:297mm !important;
+    height:auto !important;
 
-  /* Không để trình duyệt tự thêm khoảng trắng */
+    margin:0 !important;
+    padding:9mm 11mm 12mm !important;
 
-  .brand{
-    margin-bottom:8mm;
-  }
-
-  .cover-visual{
+    background:#fff !important;
     box-shadow:none !important;
+
+    overflow:visible !important;
+
+    break-before:page;
+    page-break-before:always;
+
+    break-after:auto;
+    page-break-after:auto;
   }
 
-  .cover-grid input{
-    color:#111 !important;
+  .paper:first-of-type{
+    break-before:auto;
+    page-break-before:auto;
   }
 
   /*
-    Giữ từng phần trong đúng trang A4.
+    Các trang báo giá tiếp theo bắt đầu ở trang A4 mới,
+    nhưng nếu bản thân nội dung dài thì được phép
+    tự động chảy sang trang kế tiếp.
   */
 
   table{
+    width:100%;
     page-break-inside:auto;
+    break-inside:auto;
   }
 
   tr{
@@ -820,6 +650,8 @@ li{
     break-inside:avoid;
   }
 
+  h1,
+  h2,
   h3{
     page-break-after:avoid;
     break-after:avoid;
@@ -828,5 +660,177 @@ li{
   .sign{
     page-break-inside:avoid;
     break-inside:avoid;
+  }
+
+  /*
+    Ô nhập trở thành chữ khi xuất PDF.
+  */
+
+  input,
+  textarea,
+  select,
+  .editable{
+    border:0 !important;
+    background:transparent !important;
+    box-shadow:none !important;
+    outline:none !important;
+    padding:0 !important;
+
+    color:#111 !important;
+
+    appearance:none !important;
+    -webkit-appearance:none !important;
+  }
+
+  /*
+    Logo và ảnh.
+  */
+
+  .cover-visual{
+    box-shadow:none !important;
+    page-break-inside:avoid;
+    break-inside:avoid;
+  }
+
+  /*
+    Footer không ghim bằng absolute khi in.
+    Nó nằm trong luồng nội dung để không tạo
+    khoảng trắng hoặc trang rỗng.
+  */
+
+  .footer{
+    position:static !important;
+    right:auto;
+    bottom:auto;
+    left:auto;
+
+    width:100%;
+    margin-top:7mm;
+  }
+
+  /*
+    Giảm nhẹ typography để các trang sử dụng
+    tối đa diện tích A4.
+  */
+
+  .brand{
+    margin-bottom:5mm;
+  }
+
+  .brand-logo{
+    width:15mm;
+    height:15mm;
+    flex-basis:15mm;
+  }
+
+  .brand-name{
+    font-size:17px;
+  }
+
+  .brand-sub{
+    font-size:7.3px;
+  }
+
+  .company-meta{
+    font-size:6.2px;
+  }
+
+  .docno{
+    font-size:8.5px;
+  }
+
+  h2{
+    font-size:16px;
+    margin-bottom:6px;
+  }
+
+  h3{
+    margin:6px 0 4px;
+    padding:4px 6px;
+    font-size:12.5px;
+  }
+
+  table{
+    font-size:8.2px;
+  }
+
+  th,
+  td{
+    padding:2px 3px;
+    line-height:1.08;
+  }
+
+  .note{
+    margin:2.5px 0;
+    font-size:8px;
+    line-height:1.13;
+  }
+
+  .para{
+    margin:2px 0;
+    font-size:8.1px;
+    line-height:1.13;
+  }
+
+  ul{
+    margin-top:2px;
+    margin-bottom:3px;
+  }
+
+  li{
+    margin:0;
+    font-size:7.9px;
+    line-height:1.08;
+  }
+
+  .sign{
+    margin-top:10px;
+    font-size:8.5px;
+  }
+
+  .sign-space{
+    height:30px;
+  }
+
+  /*
+    Trang bìa.
+  */
+
+  .cover-visual{
+    width:75mm;
+    height:43mm;
+    margin:1mm auto 3mm;
+  }
+
+  .cover-title{
+    margin:3mm 0 3mm;
+    font-size:24px;
+  }
+
+  .cover-grid{
+    margin-top:3mm;
+  }
+
+  .cover-grid .row{
+    min-height:7mm;
+    margin:1.5mm 0;
+    font-size:11.5px;
+  }
+
+  .cover-grid .row.main{
+    font-size:13px;
+  }
+
+  .cover-grid input{
+    height:auto;
+    padding:1px 2px !important;
+  }
+
+  .cover-bottom{
+    margin-top:3mm;
+  }
+
+  .watermark{
+    font-size:32px;
   }
 }
