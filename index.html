@@ -1,35 +1,62 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>THANG MÁY ĐỨC ANH VIỆT NAM – Báo giá thang máy</title>
 
-<link rel="stylesheet" href="css/style.css">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  >
+
+  <title>
+    THANG MÁY ĐỨC ANH VIỆT NAM – Báo giá thang máy
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
+
 </head>
 
 <body>
 
+<!-- =====================================================
+     THANH CÔNG CỤ
+===================================================== -->
+
 <div class="toolbar">
-  <strong>THANG MÁY ĐỨC ANH VIỆT NAM · Mẫu báo giá thang máy</strong>
+
+  <strong>
+    THANG MÁY ĐỨC ANH VIỆT NAM · Mẫu báo giá thang máy
+  </strong>
 
   <button onclick="window.print()">
     In / Lưu PDF
   </button>
 
-  <button class="secondary" onclick="fillDemo()">
+  <button
+    class="secondary"
+    onclick="fillDemo()"
+  >
     Nạp dữ liệu mẫu
   </button>
 
-  <button class="danger" onclick="resetForm()">
+  <button
+    class="danger"
+    onclick="resetForm()"
+  >
     Xóa dữ liệu nhập
   </button>
+
 </div>
 
 
-<!-- =========================================================
-     TRANG 1
-========================================================= -->
+<!-- =====================================================
+     TRANG 1 — BÌA BÁO GIÁ
+===================================================== -->
 
 <div class="paper">
 
@@ -37,12 +64,11 @@
 
     <div class="brand-left">
 
-      <div class="brand-logo">
-        <img
-          src="assets/logo/logo-duc-anh.png"
-          alt="Logo Đức Anh"
-        >
-      </div>
+      <img
+        class="brand-logo"
+        src="assets/logo/logo-duc-anh.png"
+        alt="Logo Đức Anh"
+      >
 
       <div>
 
@@ -55,8 +81,7 @@
         </div>
 
         <div class="company-meta">
-          MST: 0201879133 · Đ/c: HP81, Royal Island, Đảo Vũ Yên,
-          Phường Thủy Nguyên, TP Hải Phòng
+          MST: 0201879133 · Đ/c: HP81, Royal Island, Đảo Vũ Yên, Phường Thủy Nguyên, TP Hải Phòng
         </div>
 
       </div>
@@ -65,12 +90,15 @@
 
 
     <div class="docno">
+
       Số:
+
       <input
         id="so"
-        class="input-sm"
         value="34.2026/BG-GROVA"
+        class="input-sm"
       >
+
     </div>
 
   </div>
@@ -82,10 +110,12 @@
 
 
   <div class="cover-visual">
+
     <img
       src="assets/images/elevator-cover.png"
       alt="Hình ảnh thang máy Đức Anh"
     >
+
   </div>
 
 
@@ -97,64 +127,95 @@
   <div class="cover-grid">
 
     <div class="row">
+
       <b>Số:</b>
+
       <span id="soCover"></span>
+
     </div>
 
+
     <div class="row main">
-      CÔNG TRÌNH:
+
+      <b>
+        CÔNG TRÌNH:
+      </b>
+
       <input
         id="congTrinh"
         value="MR. ĐẠI"
-        style="width:180px;display:inline-block"
       >
+
     </div>
 
+
     <div class="row">
-      <b>Địa chỉ:</b>
+
+      <b>
+        Địa chỉ:
+      </b>
+
       <input
         id="diaChi"
         value="69 Chợ Con"
-        style="width:180px;display:inline-block"
       >
+
     </div>
 
-    <br>
 
     <div class="row main">
-      Loại thang:
+
+      <b>
+        Loại thang:
+      </b>
+
       <input
         id="loaiThang"
         value="Tải khách"
-        style="width:150px;display:inline-block"
       >
+
     </div>
 
+
     <div class="row">
-      <b>Hiệu:</b>
+
+      <b>
+        Hiệu:
+      </b>
+
       <input
         id="hieuThang"
         value="THANG MÁY ĐỨC ANH VIỆT NAM"
-        style="width:180px;display:inline-block"
       >
+
     </div>
 
+
     <div class="row">
-      <b>Load:</b>
+
+      <b>
+        Load:
+      </b>
+
       <input
         id="load"
         value="450kg – 4stop – 60m/phút"
-        style="width:220px;display:inline-block"
       >
+
     </div>
 
+
     <div class="row">
-      <b>Số lượng:</b>
+
+      <b>
+        Số lượng:
+      </b>
+
       <input
         id="soLuong"
         value="01 thang"
-        style="width:110px;display:inline-block"
       >
+
     </div>
 
   </div>
@@ -163,46 +224,62 @@
   <div class="cover-bottom">
 
     <div>
+
       <b>
+
         <input
           id="thang"
           value="Tháng 07 năm 2026"
-          style="
-            width:150px;
-            background:transparent;
-            border:0;
-            text-align:center
-          "
         >
+
       </b>
+
     </div>
 
   </div>
 
 
   <div class="footer">
-    <span>THANG MÁY ĐỨC ANH VIỆT NAM</span>
-    <span>Trang 1</span>
+
+    <span>
+      THANG MÁY ĐỨC ANH VIỆT NAM
+    </span>
+
+    <span>
+      Trang 1
+    </span>
+
   </div>
 
 </div>
 
 
-
-<!-- =========================================================
-     TRANG 2
-========================================================= -->
+<!-- =====================================================
+     TRANG 2 — BẢNG GIÁ
+===================================================== -->
 
 <div class="paper">
 
   <div class="brand">
-    <div class="brand-name">
-      THANG MÁY ĐỨC ANH VIỆT NAM
+
+    <div class="brand-left">
+
+      <img
+        class="brand-logo"
+        src="assets/logo/logo-duc-anh.png"
+        alt="Logo Đức Anh"
+      >
+
+      <div class="brand-name">
+        THANG MÁY ĐỨC ANH VIỆT NAM
+      </div>
+
     </div>
 
     <div class="docno">
       BẢNG GIÁ THANG MÁY
     </div>
+
   </div>
 
 
@@ -219,142 +296,194 @@
   <table>
 
     <tr>
-      <th>Nội dung</th>
 
       <th>
+        Nội dung
+      </th>
+
+      <th>
+
         Máy kéo<br>
+
         <input
           id="mayKeo"
           value="Torin"
           class="center"
         >
+
       </th>
+
     </tr>
 
+
     <tr>
+
       <td class="label">
         Xuất sứ
       </td>
 
       <td>
+
         <input
           id="xuatXu"
           value="China"
           class="center"
         >
+
       </td>
+
     </tr>
 
+
     <tr>
+
       <td class="label">
         Trọng tải (Kg)
       </td>
 
       <td>
+
         <input
           id="taiTrong"
           value="450"
           class="center"
         >
+
       </td>
+
     </tr>
 
+
     <tr>
+
       <td class="label">
         Điểm dừng (Stops)
       </td>
 
       <td>
+
         <input
           id="diemDung"
           value="04"
           class="center"
         >
+
       </td>
+
     </tr>
 
+
     <tr>
+
       <td class="label">
         Tốc độ (m/p)
       </td>
 
       <td>
+
         <input
           id="tocDo"
           value="60"
           class="center"
         >
+
       </td>
+
     </tr>
 
+
     <tr>
+
       <td class="label">
         Công suất
       </td>
 
       <td>
+
         <input
           id="congSuat"
           value="3.3 KW"
           class="center"
         >
+
       </td>
+
     </tr>
 
+
     <tr>
+
       <td class="label">
         Cáp kéo
       </td>
 
       <td>
+
         <input
           id="capKeo"
           value="8"
           class="center"
         >
+
       </td>
+
     </tr>
 
+
     <tr>
+
       <td class="label">
         Tủ điện
       </td>
 
       <td>
+
         <input
           id="tuDien"
           value="STEP"
           class="center"
         >
+
       </td>
+
     </tr>
 
+
     <tr class="price">
+
       <td>
         Đơn Giá
       </td>
 
       <td>
+
         <input
           id="donGia1"
           value="315,000,000"
           class="num"
         >
+
       </td>
+
     </tr>
 
+
     <tr class="price">
+
       <td>
         Thành Tiền
       </td>
 
       <td>
+
         <input
           id="chuTien1"
           value="BA TRĂM MƯỜI NĂM TRIỆU ĐỒNG CHẴN"
           class="center"
         >
+
       </td>
+
     </tr>
 
   </table>
@@ -368,31 +497,48 @@
   <table>
 
     <tr>
-      <th>NỘI DUNG</th>
-      <th>ĐƠN GIÁ</th>
-      <th>THÀNH TIỀN</th>
+
+      <th>
+        NỘI DUNG
+      </th>
+
+      <th>
+        ĐƠN GIÁ
+      </th>
+
+      <th>
+        THÀNH TIỀN
+      </th>
+
     </tr>
+
 
     <tr>
 
       <td>
+
         <textarea id="khungThep">KHUNG THÉP THANG MÁY DẦY 4 MM BẢN 120 X 120 X 50 X 40 - 4 Tầng</textarea>
+
       </td>
 
       <td>
+
         <input
           id="donGia2"
           value="55,000,000 VNĐ"
           class="num"
         >
+
       </td>
 
       <td>
+
         <input
           id="thanhTien2"
           value="55,000,000 VNĐ"
           class="num"
         >
+
       </td>
 
     </tr>
@@ -402,16 +548,16 @@
 
   <p class="note center">
 
-    <b><i>Tổng tiền I + II:</i></b>
+    <b>
+      <i>
+        Tổng tiền I + II:
+      </i>
+    </b>
 
     <input
       id="tongTien"
       value="370,000,000"
-      style="
-        width:130px;
-        display:inline-block;
-        text-align:center
-      "
+      style="width:130px;display:inline-block;text-align:center"
     >
 
     (Ba trăm bẩy mươi triệu đồng chẵn)
@@ -420,25 +566,35 @@
 
 
   <p class="note">
-    <b><u>Giá trên đã bao gồm:</u></b>
-    giá vật tư, thiết bị thang máy tại chân công trình,
-    bảo hành thiết bị miễn phí 12tháng
-    (<i>Thời gian bảo hành hàng tháng Công ty cử kỹ sư xuống
-    kiểm tra An toàn và vệ sinh thiết bị thang máy cho tới khi
-    hết thời gian bảo hành</i>).
+
+    <b>
+      <u>
+        Giá trên đã bao gồm:
+      </u>
+    </b>
+
+    giá vật tư, thiết bị thang máy tại chân công trình, bảo hành thiết bị miễn phí 12tháng (<i>Thời gian bảo hành hàng tháng Công ty cử kỹ sư xuống kiểm tra An toàn và vệ sinh thiết bị thang máy cho tới khi hết thời gian bảo hành</i>).
+
   </p>
 
 
   <p class="note">
-    <b><u>Đơn giá đã bao gồm:</u></b>
+
+    <b>
+      <u>
+        Đơn giá đã bao gồm:
+      </u>
+    </b>
+
     Thuế VAT 8%
+
   </p>
 
 
   <p class="note">
-    (Chưa bao gồm Aptomat 40A, đường dây điện 3 pha lên đỉnh
-    giếng thang, tiếp địa lên đỉnh giếng thang
-    (Chủ nhà cung cấp chưa gồm trong báo giá)
+
+    (Chưa bao gồm Aptomat 40A, đường dây điện 3 pha lên đỉnh giếng thang, tiếp địa lên đỉnh giếng thang (Chủ nhà cung cấp chưa gồm trong báo giá)
+
   </p>
 
 
@@ -455,40 +611,58 @@
   </p>
 
   <p class="note">
-    - Sử dụng tối thiểu 2 cọc đồng, chôn cách nhau tối thiểu
-    50cm điện trở tối đa là 4 ôm.
+    - Sử dụng tối thiểu 2 cọc đồng, chôn cách nhau tối thiểu 50cm điện trở tối đa là 4 ôm.
   </p>
 
 
   <div class="footer">
-    <span>THANG MÁY ĐỨC ANH VIỆT NAM</span>
-    <span>Trang 2</span>
+
+    <span>
+      THANG MÁY ĐỨC ANH VIỆT NAM
+    </span>
+
+    <span>
+      Trang 2
+    </span>
+
   </div>
 
 </div>
 
 
-
-<!-- =========================================================
+<!-- =====================================================
      TRANG 3
-========================================================= -->
+===================================================== -->
 
 <div class="paper">
 
   <div class="brand">
-    <div class="brand-name">
-      THANG MÁY ĐỨC ANH VIỆT NAM
+
+    <div class="brand-left">
+
+      <img
+        class="brand-logo"
+        src="assets/logo/logo-duc-anh.png"
+        alt="Logo Đức Anh"
+      >
+
+      <div class="brand-name">
+        THANG MÁY ĐỨC ANH VIỆT NAM
+      </div>
+
     </div>
 
     <div class="docno">
       BÁO GIÁ THANG MÁY
     </div>
+
   </div>
 
 
   <h3>
     Điều 2: Hiệu lực báo giá
   </h3>
+
 
   <p class="para">
     - Báo giá này có hiệu lực trong thời hạn 30 ngày kể từ ngày ký báo giá.
@@ -502,6 +676,7 @@
   <h3>
     Điều 3: Phạm vi cung cấp và lắp đặt thang máy của Công ty TNHH Thang máy Đức Anh Việt Nam
   </h3>
+
 
   <p class="para">
     - Khảo sát và thiết kế bản vẽ mặt bằng hố thang.
@@ -528,18 +703,35 @@
     Điều 4: Bảo Hành và Bảo Trì
   </h3>
 
-  <p class="para">
-    - Bên B có trách nhiệm
-    <b><i>bảo hành thiết bị trong thời hạn mười hai (12) tháng hoặc mười năm (15) tháng kể từ khi giao hàng đến chân công trình. Bảo hành máy kéo 5 năm.</i></b>
-  </p>
 
   <p class="para">
+
     - Bên B có trách nhiệm
-    <b><i>bảo trì miễn phí thang máy trong thời hạn mười hai (12) tháng kể từ ngày nghiệm thu và bàn giao thang máy.(Một tháng 1 lần)</i></b>
+    <b>
+      <i>
+        bảo hành thiết bị trong thời hạn mười hai (12) tháng hoặc mười năm (15) tháng kể từ khi giao hàng đến chân công trình. Bảo hành máy kéo 5 năm.
+      </i>
+    </b>
+
   </p>
 
+
   <p class="para">
+
+    - Bên B có trách nhiệm
+    <b>
+      <i>
+        bảo trì miễn phí thang máy trong thời hạn mười hai (12) tháng kể từ ngày nghiệm thu và bàn giao thang máy.(Một tháng 1 lần)
+      </i>
+    </b>
+
+  </p>
+
+
+  <p class="para">
+
     - Kể từ ngày hai bên ký Biên bản nghiệm thu hoàn thành hạng mục công trình để đưa vào sử dụng. Nếu trong thời gian bảo hành mà thang máy bị hư hỏng, nhận được thông báo của bên A trong thời gian sớm nhất bên B phải cử người đến xử lý và chịu mọi phí tổn sửa chữa nếu xảy ra sự cố kỹ thuật do lỗi của nhà sản xuất hoặc do lỗi khác của bên B.
+
   </p>
 
 
@@ -549,16 +741,22 @@
 
 
   <p class="para">
+
     <b>
       I. &nbsp; Quy Trình Bảo Trì Thang Máy – Công Ty Cổ Phần Grova Holdings
     </b>
+
   </p>
 
 
   <p class="para">
-    <b><i>
-      Bước 1: Kiểm tra và vệ sinh buồng thang máy
-    </i></b>
+
+    <b>
+      <i>
+        Bước 1: Kiểm tra và vệ sinh buồng thang máy
+      </i>
+    </b>
+
   </p>
 
 
@@ -588,28 +786,46 @@
 
 
   <div class="footer">
-    <span>THANG MÁY ĐỨC ANH VIỆT NAM</span>
-    <span>Trang 3</span>
+
+    <span>
+      THANG MÁY ĐỨC ANH VIỆT NAM
+    </span>
+
+    <span>
+      Trang 3
+    </span>
+
   </div>
 
 </div>
 
 
-
-<!-- =========================================================
+<!-- =====================================================
      TRANG 4
-========================================================= -->
+===================================================== -->
 
 <div class="paper">
 
   <div class="brand">
-    <div class="brand-name">
-      THANG MÁY ĐỨC ANH VIỆT NAM
+
+    <div class="brand-left">
+
+      <img
+        class="brand-logo"
+        src="assets/logo/logo-duc-anh.png"
+        alt="Logo Đức Anh"
+      >
+
+      <div class="brand-name">
+        THANG MÁY ĐỨC ANH VIỆT NAM
+      </div>
+
     </div>
 
     <div class="docno">
       NỘI DUNG BẢO TRÌ
     </div>
+
   </div>
 
 
@@ -643,9 +859,13 @@
 
 
   <p class="para">
-    <b><i>
-      Bước 2: Kiểm tra giếng thang và phía bên trên cabin
-    </i></b>
+
+    <b>
+      <i>
+        Bước 2: Kiểm tra giếng thang và phía bên trên cabin
+      </i>
+    </b>
+
   </p>
 
 
@@ -703,9 +923,13 @@
 
 
   <p class="para">
-    <b><i>
-      Bước 3: Kiểm tra đáy giếng thang và phía bên dưới cabin
-    </i></b>
+
+    <b>
+      <i>
+        Bước 3: Kiểm tra đáy giếng thang và phía bên dưới cabin
+      </i>
+    </b>
+
   </p>
 
 
@@ -759,9 +983,13 @@
 
 
   <p class="para">
-    <b><i>
-      Bước 4: Bảo trì bên trong cabin
-    </i></b>
+
+    <b>
+      <i>
+        Bước 4: Bảo trì bên trong cabin
+      </i>
+    </b>
+
   </p>
 
 
@@ -775,28 +1003,46 @@
 
 
   <div class="footer">
-    <span>THANG MÁY ĐỨC ANH VIỆT NAM</span>
-    <span>Trang 4</span>
+
+    <span>
+      THANG MÁY ĐỨC ANH VIỆT NAM
+    </span>
+
+    <span>
+      Trang 4
+    </span>
+
   </div>
 
 </div>
 
 
-
-<!-- =========================================================
+<!-- =====================================================
      TRANG 5
-========================================================= -->
+===================================================== -->
 
 <div class="paper">
 
   <div class="brand">
-    <div class="brand-name">
-      THANG MÁY ĐỨC ANH VIỆT NAM
+
+    <div class="brand-left">
+
+      <img
+        class="brand-logo"
+        src="assets/logo/logo-duc-anh.png"
+        alt="Logo Đức Anh"
+      >
+
+      <div class="brand-name">
+        THANG MÁY ĐỨC ANH VIỆT NAM
+      </div>
+
     </div>
 
     <div class="docno">
       NỘI DUNG BẢO TRÌ
     </div>
+
   </div>
 
 
@@ -814,9 +1060,13 @@
 
 
   <p class="para">
-    <b><i>
-      Bước 5: Bảo trì, bảo dưỡng ngoài cửa tầng
-    </i></b>
+
+    <b>
+      <i>
+        Bước 5: Bảo trì, bảo dưỡng ngoài cửa tầng
+      </i>
+    </b>
+
   </p>
 
 
@@ -842,16 +1092,22 @@
 
 
   <p class="para">
+
     <b>
       II. &nbsp; Các công việc bảo trì bảo dưỡng thang máy cần thực hiện định kỳ
     </b>
+
   </p>
 
 
   <p class="para">
-    <b><i>
-      Những công việc bảo trì hằng tháng
-    </i></b>
+
+    <b>
+      <i>
+        Những công việc bảo trì hằng tháng
+      </i>
+    </b>
+
   </p>
 
 
@@ -913,9 +1169,13 @@
 
 
   <p class="para">
-    <b><i>
-      Các công việc bảo trì sau 6 tháng
-    </i></b>
+
+    <b>
+      <i>
+        Các công việc bảo trì sau 6 tháng
+      </i>
+    </b>
+
   </p>
 
 
@@ -941,35 +1201,57 @@
 
 
   <div class="footer">
-    <span>THANG MÁY ĐỨC ANH VIỆT NAM</span>
-    <span>Trang 5</span>
+
+    <span>
+      THANG MÁY ĐỨC ANH VIỆT NAM
+    </span>
+
+    <span>
+      Trang 5
+    </span>
+
   </div>
 
 </div>
 
 
-
-<!-- =========================================================
+<!-- =====================================================
      TRANG 6
-========================================================= -->
+===================================================== -->
 
 <div class="paper">
 
   <div class="brand">
-    <div class="brand-name">
-      THANG MÁY ĐỨC ANH VIỆT NAM
+
+    <div class="brand-left">
+
+      <img
+        class="brand-logo"
+        src="assets/logo/logo-duc-anh.png"
+        alt="Logo Đức Anh"
+      >
+
+      <div class="brand-name">
+        THANG MÁY ĐỨC ANH VIỆT NAM
+      </div>
+
     </div>
 
     <div class="docno">
       NỘI DUNG BẢO TRÌ
     </div>
+
   </div>
 
 
   <p class="para">
-    <b><i>
-      Các công việc bảo dưỡng cần làm sau 12 tháng
-    </i></b>
+
+    <b>
+      <i>
+        Các công việc bảo dưỡng cần làm sau 12 tháng
+      </i>
+    </b>
+
   </p>
 
 
@@ -1047,28 +1329,46 @@
 
 
   <div class="footer">
-    <span>THANG MÁY ĐỨC ANH VIỆT NAM</span>
-    <span>Trang 6</span>
+
+    <span>
+      THANG MÁY ĐỨC ANH VIỆT NAM
+    </span>
+
+    <span>
+      Trang 6
+    </span>
+
   </div>
 
 </div>
 
 
-
-<!-- =========================================================
-     TRANG 7
-========================================================= -->
+<!-- =====================================================
+     TRANG 7 — THÔNG SỐ KỸ THUẬT
+===================================================== -->
 
 <div class="paper">
 
   <div class="brand">
-    <div class="brand-name">
-      THANG MÁY ĐỨC ANH VIỆT NAM
+
+    <div class="brand-left">
+
+      <img
+        class="brand-logo"
+        src="assets/logo/logo-duc-anh.png"
+        alt="Logo Đức Anh"
+      >
+
+      <div class="brand-name">
+        THANG MÁY ĐỨC ANH VIỆT NAM
+      </div>
+
     </div>
 
     <div class="docno">
       THÔNG SỐ KỸ THUẬT THANG MÁY
     </div>
+
   </div>
 
 
@@ -1080,159 +1380,222 @@
   <table>
 
     <tr>
-      <th>Tên thang</th>
 
       <th>
+        Tên thang
+      </th>
+
+      <th>
+
         <input
           value="Thang máy tải khách DAE"
           class="center"
         >
+
       </th>
+
     </tr>
 
 
     <tr>
-      <td colspan="2" class="section">
+
+      <td
+        colspan="2"
+        class="section"
+      >
         1. Các thông số chung :
       </td>
+
     </tr>
 
 
     <tr>
-      <td class="label">Mã hiệu</td>
+
+      <td class="label">
+        Mã hiệu
+      </td>
+
       <td>
         <input value="Thang Không Phòng Máy – DAE – P450">
       </td>
+
     </tr>
 
 
     <tr>
-      <td class="label">Số lượng</td>
+
+      <td class="label">
+        Số lượng
+      </td>
+
       <td>
         <input value="01">
       </td>
+
     </tr>
 
 
     <tr>
-      <td class="label">Tốc độ (m/s)</td>
+
+      <td class="label">
+        Tốc độ (m/s)
+      </td>
+
       <td>
         <input value="1">
       </td>
+
     </tr>
 
 
     <tr>
-      <td class="label">Tải trọng (Kg)</td>
+
+      <td class="label">
+        Tải trọng (Kg)
+      </td>
+
       <td>
         <input value="450">
       </td>
+
     </tr>
 
 
     <tr>
+
       <td class="label">
         Số điểm dừng / Số tầng
       </td>
+
       <td>
         <input value="4/4">
       </td>
+
     </tr>
 
 
     <tr>
+
       <td class="label">
         Tầng phục vụ mặt trước
       </td>
+
       <td>
         <input value="1,2,3,4">
       </td>
+
     </tr>
 
 
     <tr>
+
       <td class="label">
         Tầng phục vụ mặt sau
       </td>
+
       <td>
         <input value="Không có">
       </td>
+
     </tr>
 
 
     <tr>
+
       <td class="label">
         Tầng phục vụ bên hông
       </td>
+
       <td>
         <input value="Không có">
       </td>
+
     </tr>
 
 
     <tr>
+
       <td class="label">
         Nhóm điều khiển
       </td>
+
       <td>
         <input value="Điều khiển Simple">
       </td>
+
     </tr>
 
 
     <tr>
+
       <td class="label">
         Vị trí phòng máy
       </td>
+
       <td>
         <input value="Không phòng máy">
       </td>
+
     </tr>
 
 
     <tr>
+
       <td class="label">
         Hành trình
       </td>
+
       <td>
         <input value="Theo thực tế">
       </td>
+
     </tr>
 
 
     <tr>
+
       <td class="label">
         Động cơ/Công suất
       </td>
+
       <td>
         <input value="Torin / 3.3 KW">
       </td>
+
     </tr>
 
 
     <tr>
+
       <td class="label">
         Tủ điện/ Công suất
       </td>
+
       <td>
         <input value="STEP / 7.5 KW">
       </td>
+
     </tr>
 
 
     <tr>
+
       <td class="label">
         Nguồn điện
       </td>
 
       <td>
+
         <textarea> Nguồn điện chính: 3 phase 380V (±10%) 50±1 Hz
 Nguồn chiếu sáng: 1 Phase 220V (±10%) 50±1 Hz</textarea>
+
       </td>
+
     </tr>
 
 
     <tr>
+
       <td class="label">
         Tiêu chuẩn an toàn
       </td>
@@ -1240,10 +1603,12 @@ Nguồn chiếu sáng: 1 Phase 220V (±10%) 50±1 Hz</textarea>
       <td>
         <input value="TCVN 6395: 2008">
       </td>
+
     </tr>
 
 
     <tr>
+
       <td class="label">
         Năm sản xuất
       </td>
@@ -1251,17 +1616,24 @@ Nguồn chiếu sáng: 1 Phase 220V (±10%) 50±1 Hz</textarea>
       <td>
         <input value="2026 Trở về sau">
       </td>
+
     </tr>
 
 
     <tr>
-      <td colspan="2" class="section">
+
+      <td
+        colspan="2"
+        class="section"
+      >
         2. Thông số kích thước :
       </td>
+
     </tr>
 
 
     <tr>
+
       <td class="label">
         Kích thước cabin (AA x BB x H) mm
       </td>
@@ -1269,10 +1641,12 @@ Nguồn chiếu sáng: 1 Phase 220V (±10%) 50±1 Hz</textarea>
       <td>
         <input value="900 x 1100 x 2400">
       </td>
+
     </tr>
 
 
     <tr>
+
       <td class="label">
         Kích thước cửa cabin (LL x H) mm
       </td>
@@ -1280,10 +1654,12 @@ Nguồn chiếu sáng: 1 Phase 220V (±10%) 50±1 Hz</textarea>
       <td>
         <input value="600 x 2100">
       </td>
+
     </tr>
 
 
     <tr>
+
       <td class="label">
         Kiểu mở cửa
       </td>
@@ -1291,10 +1667,12 @@ Nguồn chiếu sáng: 1 Phase 220V (±10%) 50±1 Hz</textarea>
       <td>
         <input value="CO – HAI CÁNH TIM">
       </td>
+
     </tr>
 
 
     <tr>
+
       <td class="label">
         Kích thước hố thang (AH x BH) mm
       </td>
@@ -1302,10 +1680,12 @@ Nguồn chiếu sáng: 1 Phase 220V (±10%) 50±1 Hz</textarea>
       <td>
         <input value="1300 X 1700(Kích thước thông thuỷ)">
       </td>
+
     </tr>
 
 
     <tr>
+
       <td class="label">
         Độ âm Pit – PH(mm)
       </td>
@@ -1313,10 +1693,12 @@ Nguồn chiếu sáng: 1 Phase 220V (±10%) 50±1 Hz</textarea>
       <td>
         <input value="1200">
       </td>
+
     </tr>
 
 
     <tr>
+
       <td class="label">
         Độ cao đỉnh – OH (mm)
       </td>
@@ -1324,10 +1706,12 @@ Nguồn chiếu sáng: 1 Phase 220V (±10%) 50±1 Hz</textarea>
       <td>
         <input value="3200">
       </td>
+
     </tr>
 
 
     <tr>
+
       <td class="label">
         Chiều vị trí đặt máy (mm)
       </td>
@@ -1335,17 +1719,24 @@ Nguồn chiếu sáng: 1 Phase 220V (±10%) 50±1 Hz</textarea>
       <td>
         <input value="1200">
       </td>
+
     </tr>
 
 
     <tr>
-      <td colspan="2" class="section">
+
+      <td
+        colspan="2"
+        class="section"
+      >
         3. Thiết kế nội thất thang :
       </td>
+
     </tr>
 
 
     <tr>
+
       <td class="label">
         Trần phòng thang
       </td>
@@ -1353,10 +1744,12 @@ Nguồn chiếu sáng: 1 Phase 220V (±10%) 50±1 Hz</textarea>
       <td>
         <input value="Inox gương cao cấp và meka đài loan (inox 304)">
       </td>
+
     </tr>
 
 
     <tr>
+
       <td class="label">
         Đèn chiếu sáng
       </td>
@@ -1364,10 +1757,12 @@ Nguồn chiếu sáng: 1 Phase 220V (±10%) 50±1 Hz</textarea>
       <td>
         <input value="Đèn LED chiếu sáng trực tiếp từ trần cabin">
       </td>
+
     </tr>
 
 
     <tr>
+
       <td class="label">
         Vật liệu vách trước
       </td>
@@ -1375,10 +1770,12 @@ Nguồn chiếu sáng: 1 Phase 220V (±10%) 50±1 Hz</textarea>
       <td>
         <input value="Inox gương cao cấp inox 304 dày 1,2 mm">
       </td>
+
     </tr>
 
 
     <tr>
+
       <td class="label">
         Vật liệu vách bên phải
       </td>
@@ -1386,10 +1783,12 @@ Nguồn chiếu sáng: 1 Phase 220V (±10%) 50±1 Hz</textarea>
       <td>
         <input value="Tấm kính cường lực nẹp inox gương vàng hồng(inox 304) dày 1,2 mm">
       </td>
+
     </tr>
 
 
     <tr>
+
       <td class="label">
         Vật liệu vách bên trái
       </td>
@@ -1397,10 +1796,12 @@ Nguồn chiếu sáng: 1 Phase 220V (±10%) 50±1 Hz</textarea>
       <td>
         <input value="Tấm kính cường lực nẹp inox gương vàng hồng(inox 304) dày 1,2 mm">
       </td>
+
     </tr>
 
 
     <tr>
+
       <td class="label">
         Vật liệu vách sau
       </td>
@@ -1408,30 +1809,47 @@ Nguồn chiếu sáng: 1 Phase 220V (±10%) 50±1 Hz</textarea>
       <td>
         <input value="Inox gương lớn ở giữa sen inox gương vàng 2 bên (inox 304) dày 1,2mm">
       </td>
+
     </tr>
 
   </table>
 
 
   <div class="footer">
-    <span>THANG MÁY ĐỨC ANH VIỆT NAM</span>
-    <span>Trang 7</span>
+
+    <span>
+      THANG MÁY ĐỨC ANH VIỆT NAM
+    </span>
+
+    <span>
+      Trang 7
+    </span>
+
   </div>
 
 </div>
 
 
-
-<!-- =========================================================
+<!-- =====================================================
      TRANG 8
-========================================================= -->
+===================================================== -->
 
 <div class="paper">
 
   <div class="brand">
 
-    <div class="brand-name">
-      THANG MÁY ĐỨC ANH VIỆT NAM
+    <div class="brand-left">
+
+      <img
+        class="brand-logo"
+        src="assets/logo/logo-duc-anh.png"
+        alt="Logo Đức Anh"
+      >
+
+      <div class="brand-name">
+        THANG MÁY ĐỨC ANH VIỆT NAM
+      </div>
+
     </div>
 
     <div class="docno">
@@ -1444,30 +1862,49 @@ Nguồn chiếu sáng: 1 Phase 220V (±10%) 50±1 Hz</textarea>
   <table>
 
     <tr>
-      <td class="label">Viền chân vách</td>
 
-      <td>
+      <td class="label">
+        Viền chân vách
+      </td>
+
+      <td colspan="2">
         <input value="Inox gương cao cấp (inox 304) dày 1,2 mm">
       </td>
+
     </tr>
 
 
     <tr>
-      <td class="label">Cửa Cabin</td>
 
-      <td>
+      <td class="label">
+        Cửa Cabin
+      </td>
+
+      <td colspan="2">
         <input value="Cửa Kính cường lực, bo viền Inox 304 gương vàng hồng dày 1.2mm.">
       </td>
+
     </tr>
 
 
     <tr>
 
-      <td rowspan="7" class="center">
-        <b><i>Bảng điều khiển trong cabin COP</i></b>
+      <td
+        rowspan="7"
+        class="center"
+      >
+
+        <b>
+          <i>
+            Bảng điều khiển trong cabin COP
+          </i>
+        </b>
+
       </td>
 
-      <td class="label">Mã hiệu</td>
+      <td class="label">
+        Mã hiệu
+      </td>
 
       <td>
         <input value="DA – GSX , 01 bảng/thang">
@@ -1477,42 +1914,59 @@ Nguồn chiếu sáng: 1 Phase 220V (±10%) 50±1 Hz</textarea>
 
 
     <tr>
-      <td class="label">Vật liệu</td>
+
+      <td class="label">
+        Vật liệu
+      </td>
 
       <td>
         <input value="Inox gương và ăn mòn ở giữa , bề mặt meka cao cấp">
       </td>
+
     </tr>
 
 
     <tr>
-      <td class="label">Vị trí</td>
+
+      <td class="label">
+        Vị trí
+      </td>
 
       <td>
         <input value="Vách bên phòng thang">
       </td>
+
     </tr>
 
 
     <tr>
-      <td class="label">Nút bấm</td>
+
+      <td class="label">
+        Nút bấm
+      </td>
 
       <td>
         <input value="Nút tròn">
       </td>
+
     </tr>
 
 
     <tr>
-      <td class="label">Hiển trị trên COP</td>
+
+      <td class="label">
+        Hiển trị trên COP
+      </td>
 
       <td>
         <input value="Đi theo thang">
       </td>
+
     </tr>
 
 
     <tr>
+
       <td class="label">
         Hiển thị vị trí và chiều thang hoạt động
       </td>
@@ -1520,10 +1974,12 @@ Nguồn chiếu sáng: 1 Phase 220V (±10%) 50±1 Hz</textarea>
       <td>
         <input value="Hiển thị vị trí và chiều thang hoạt động">
       </td>
+
     </tr>
 
 
     <tr>
+
       <td class="label">
         Biển báo tải trọng thang
       </td>
@@ -1531,16 +1987,28 @@ Nguồn chiếu sáng: 1 Phase 220V (±10%) 50±1 Hz</textarea>
       <td>
         <input value="Inox cao cấp khác laze gắn trong cabin">
       </td>
+
     </tr>
 
 
     <tr>
 
-      <td rowspan="4" class="center">
-        <b><i>Tiện nghi khác</i></b>
+      <td
+        rowspan="4"
+        class="center"
+      >
+
+        <b>
+          <i>
+            Tiện nghi khác
+          </i>
+        </b>
+
       </td>
 
-      <td class="label">Tay vịn</td>
+      <td class="label">
+        Tay vịn
+      </td>
 
       <td>
         <input value="Tay vịn tròn mã hiệu DA-001, hoàn thiện inox gương, gắn tại 2 vách">
@@ -1550,6 +2018,7 @@ Nguồn chiếu sáng: 1 Phase 220V (±10%) 50±1 Hz</textarea>
 
 
     <tr>
+
       <td class="label">
         Sàn phòng thang
       </td>
@@ -1557,10 +2026,12 @@ Nguồn chiếu sáng: 1 Phase 220V (±10%) 50±1 Hz</textarea>
       <td>
         <input value="Sàn đá granit theo mẫu có sẵn">
       </td>
+
     </tr>
 
 
     <tr>
+
       <td class="label">
         Thông gió trong cabin
       </td>
@@ -1568,10 +2039,12 @@ Nguồn chiếu sáng: 1 Phase 220V (±10%) 50±1 Hz</textarea>
       <td>
         <input value="Quạt trên trần cabin hướng gió xuống dưới">
       </td>
+
     </tr>
 
 
     <tr>
+
       <td class="label">
         Ngưỡng cửa cabin
       </td>
@@ -1579,20 +2052,34 @@ Nguồn chiếu sáng: 1 Phase 220V (±10%) 50±1 Hz</textarea>
       <td>
         <input value="Nhôm cứng định hình đi theo bộ đầu cửa">
       </td>
+
     </tr>
 
 
     <tr>
-      <td colspan="3" class="section">
+
+      <td
+        colspan="3"
+        class="section"
+      >
         4. Thiết kế cửa tầng :
       </td>
+
     </tr>
 
 
     <tr>
 
-      <td rowspan="8" class="center">
-        <b>Tầng chính<br>(Tầng 1)</b>
+      <td
+        rowspan="8"
+        class="center"
+      >
+
+        <b>
+          Tầng chính<br>
+          (Tầng 1)
+        </b>
+
       </td>
 
       <td class="label">
@@ -1607,98 +2094,7 @@ Nguồn chiếu sáng: 1 Phase 220V (±10%) 50±1 Hz</textarea>
 
 
     <tr>
-      <td class="label">Ngưỡng cửa tầng</td>
 
-      <td>
-        <input value="Nhôm cứng định hình">
-      </td>
-    </tr>
-
-
-    <tr>
-      <td class="label">
-        Khung bao tầng chính (Kiểu/vật liệu)
-      </td>
-
-      <td>
-        <input value="Bản rộng Inox gương vàng hồng (inox 304) dày 1,2 mm">
-      </td>
-    </tr>
-
-
-    <tr>
-      <td class="label">
-        Bảng gọi tầng/kiểu
-      </td>
-
-      <td>
-        <input value="DA – GSX, có đế âm, bảng đơn">
-      </td>
-    </tr>
-
-
-    <tr>
-      <td class="label">
-        Loại bảng gọi
-      </td>
-
-      <td>
-        <input value="Bảng gọi tầng kết hợp mặt hiển thị">
-      </td>
-    </tr>
-
-
-    <tr>
-      <td class="label">
-        Vật liệu bảng gọi
-      </td>
-
-      <td>
-        <input value="Inox gương và ăn mòn ở giữa, bề mặt meka cao cấp">
-      </td>
-    </tr>
-
-
-    <tr>
-      <td class="label">
-        Nút nhấn
-      </td>
-
-      <td>
-        <input value="Nút tròn, gắn nổi">
-      </td>
-    </tr>
-
-
-    <tr>
-      <td class="label">
-        Hiển thị trên bảng gọi
-      </td>
-
-      <td>
-        <input value="Hiển thị DotMatrix">
-      </td>
-    </tr>
-
-
-    <tr>
-
-      <td rowspan="7" class="center">
-        <b>Các tầng<br>khác</b>
-      </td>
-
-      <td class="label">
-        Vật liệu cửa tầng
-      </td>
-
-      <td>
-        <input value="Cửa Kính cường lực, bo viền Inox 304 gương dày 1.2mm.">
-      </td>
-
-    </tr>
-
-
-    <tr>
       <td class="label">
         Ngưỡng cửa tầng
       </td>
@@ -1706,21 +2102,25 @@ Nguồn chiếu sáng: 1 Phase 220V (±10%) 50±1 Hz</textarea>
       <td>
         <input value="Nhôm cứng định hình">
       </td>
+
     </tr>
 
 
     <tr>
+
       <td class="label">
-        Khung bao tầng khác (Kiểu/vật liệu)
+        Khung bao tầng chính (Kiểu/vật liệu)
       </td>
 
       <td>
-        <input value="Bản hẹp inox gương vàng hồng(inox 304) dày 1,2 mm">
+        <input value="Bản rộng Inox gương vàng hồng (inox 304) dày 1,2 mm">
       </td>
+
     </tr>
 
 
     <tr>
+
       <td class="label">
         Bảng gọi tầng/kiểu
       </td>
@@ -1728,10 +2128,12 @@ Nguồn chiếu sáng: 1 Phase 220V (±10%) 50±1 Hz</textarea>
       <td>
         <input value="DA – GSX, có đế âm, bảng đơn">
       </td>
+
     </tr>
 
 
     <tr>
+
       <td class="label">
         Loại bảng gọi
       </td>
@@ -1739,10 +2141,12 @@ Nguồn chiếu sáng: 1 Phase 220V (±10%) 50±1 Hz</textarea>
       <td>
         <input value="Bảng gọi tầng kết hợp mặt hiển thị">
       </td>
+
     </tr>
 
 
     <tr>
+
       <td class="label">
         Vật liệu bảng gọi
       </td>
@@ -1750,21 +2154,25 @@ Nguồn chiếu sáng: 1 Phase 220V (±10%) 50±1 Hz</textarea>
       <td>
         <input value="Inox gương và ăn mòn ở giữa, bề mặt meka cao cấp">
       </td>
+
     </tr>
 
 
     <tr>
+
       <td class="label">
         Nút nhấn
       </td>
 
       <td>
-        <input value="Nút tròn gọi tầng, gắn nổi, nhập Hàn Quốc">
+        <input value="Nút tròn, gắn nổi">
       </td>
+
     </tr>
 
 
     <tr>
+
       <td class="label">
         Hiển thị trên bảng gọi
       </td>
@@ -1772,13 +2180,137 @@ Nguồn chiếu sáng: 1 Phase 220V (±10%) 50±1 Hz</textarea>
       <td>
         <input value="Hiển thị DotMatrix">
       </td>
+
     </tr>
 
 
     <tr>
 
-      <td rowspan="2" class="center">
-        <b>Vật tư khác</b>
+      <td
+        rowspan="7"
+        class="center"
+      >
+
+        <b>
+          Các tầng<br>
+          khác
+        </b>
+
+      </td>
+
+      <td class="label">
+        Vật liệu cửa tầng
+      </td>
+
+      <td>
+        <input value="Cửa Kính cường lực, bo viền Inox 304 gương dày 1.2mm.">
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+      <td class="label">
+        Ngưỡng cửa tầng
+      </td>
+
+      <td>
+        <input value="Nhôm cứng định hình">
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+      <td class="label">
+        Khung bao tầng khác (Kiểu/vật liệu)
+      </td>
+
+      <td>
+        <input value="Bản hẹp inox gương vàng hồng(inox 304) dày 1,2 mm">
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+      <td class="label">
+        Bảng gọi tầng/kiểu
+      </td>
+
+      <td>
+        <input value="DA – GSX, có đế âm, bảng đơn">
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+      <td class="label">
+        Loại bảng gọi
+      </td>
+
+      <td>
+        <input value="Bảng gọi tầng kết hợp mặt hiển thị">
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+      <td class="label">
+        Vật liệu bảng gọi
+      </td>
+
+      <td>
+        <input value="Inox gương và ăn mòn ở giữa, bề mặt meka cao cấp">
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+      <td class="label">
+        Nút nhấn
+      </td>
+
+      <td>
+        <input value="Nút tròn gọi tầng, gắn nổi, nhập Hàn Quốc">
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+      <td class="label">
+        Hiển thị trên bảng gọi
+      </td>
+
+      <td>
+        <input value="Hiển thị DotMatrix">
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+      <td
+        rowspan="2"
+        class="center"
+      >
+
+        <b>
+          Vật tư khác
+        </b>
+
       </td>
 
       <td class="label">
@@ -1808,24 +2340,40 @@ Nguồn chiếu sáng: 1 Phase 220V (±10%) 50±1 Hz</textarea>
 
 
   <div class="footer">
-    <span>THANG MÁY ĐỨC ANH VIỆT NAM</span>
-    <span>Trang 8</span>
+
+    <span>
+      THANG MÁY ĐỨC ANH VIỆT NAM
+    </span>
+
+    <span>
+      Trang 8
+    </span>
+
   </div>
 
 </div>
 
 
-
-<!-- =========================================================
+<!-- =====================================================
      TRANG 9
-========================================================= -->
+===================================================== -->
 
 <div class="paper">
 
   <div class="brand">
 
-    <div class="brand-name">
-      THANG MÁY ĐỨC ANH VIỆT NAM
+    <div class="brand-left">
+
+      <img
+        class="brand-logo"
+        src="assets/logo/logo-duc-anh.png"
+        alt="Logo Đức Anh"
+      >
+
+      <div class="brand-name">
+        THANG MÁY ĐỨC ANH VIỆT NAM
+      </div>
+
     </div>
 
     <div class="docno">
@@ -1838,6 +2386,7 @@ Nguồn chiếu sáng: 1 Phase 220V (±10%) 50±1 Hz</textarea>
   <table>
 
     <tr>
+
       <td class="label">
         Cable tải
       </td>
@@ -1845,10 +2394,12 @@ Nguồn chiếu sáng: 1 Phase 220V (±10%) 50±1 Hz</textarea>
       <td>
         <input value="China">
       </td>
+
     </tr>
 
 
     <tr>
+
       <td class="label">
         Poid đối trọng / vị trí
       </td>
@@ -1856,10 +2407,12 @@ Nguồn chiếu sáng: 1 Phase 220V (±10%) 50±1 Hz</textarea>
       <td>
         <input value="Bằng bê tông đặt đằng sau">
       </td>
+
     </tr>
 
 
     <tr>
+
       <td class="label">
         Cable điện theo cabin
       </td>
@@ -1867,10 +2420,12 @@ Nguồn chiếu sáng: 1 Phase 220V (±10%) 50±1 Hz</textarea>
       <td>
         <input value="Vemas">
       </td>
+
     </tr>
 
 
     <tr>
+
       <td class="label">
         Đầu cửa cabin
       </td>
@@ -1878,10 +2433,12 @@ Nguồn chiếu sáng: 1 Phase 220V (±10%) 50±1 Hz</textarea>
       <td>
         <input value="Ningbo – China mới 100%">
       </td>
+
     </tr>
 
 
     <tr>
+
       <td class="label">
         Đầu cửa tầng
       </td>
@@ -1889,10 +2446,12 @@ Nguồn chiếu sáng: 1 Phase 220V (±10%) 50±1 Hz</textarea>
       <td>
         <input value="Ningbo – China mới 100%">
       </td>
+
     </tr>
 
 
     <tr>
+
       <td class="label">
         Motor đầu cửa
       </td>
@@ -1900,17 +2459,22 @@ Nguồn chiếu sáng: 1 Phase 220V (±10%) 50±1 Hz</textarea>
       <td>
         <input value="Motor cửa đồng bộ theo bộ truyền">
       </td>
+
     </tr>
 
 
     <tr>
+
       <td class="label">
         Hệ điều khiển
       </td>
 
       <td>
+
         <textarea>Điều khiển VVVF điều khiển tốc độ vô cấp bằng hệ thống thay đổi điện áp và tần số giúp cửa thang máy được đóng mở nhẹ nhàng và êm ái</textarea>
+
       </td>
+
     </tr>
 
   </table>
@@ -1919,34 +2483,50 @@ Nguồn chiếu sáng: 1 Phase 220V (±10%) 50±1 Hz</textarea>
   <div class="sign">
 
     <div>
+
       <b>
         ĐẠI DIỆN THANG MÁY ĐỨC ANH VIỆT NAM
       </b>
 
       <div class="sign-space"></div>
+
     </div>
 
 
     <div>
+
       <b>
         KHÁCH HÀNG
       </b>
 
       <div class="sign-space"></div>
+
     </div>
 
   </div>
 
 
   <div class="footer">
-    <span>THANG MÁY ĐỨC ANH VIỆT NAM</span>
-    <span>Trang 9</span>
+
+    <span>
+      THANG MÁY ĐỨC ANH VIỆT NAM
+    </span>
+
+    <span>
+      Trang 9
+    </span>
+
   </div>
 
 </div>
 
 
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
 <script src="js/app.js"></script>
 
 </body>
+
 </html>
