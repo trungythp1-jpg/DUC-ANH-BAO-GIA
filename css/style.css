@@ -2,10 +2,10 @@
   --yellow:#f4b400;
   --yellow2:#ffc928;
   --black:#111111;
-  --ink:#20252a;
-  --muted:#68717a;
-  --line:#c7cdd2;
-  --soft:#fff8dc;
+  --ink:#1f1f1f;
+  --muted:#666;
+  --line:#b9c1c8;
+  --soft:#fff7d6;
 }
 
 *{
@@ -19,209 +19,322 @@ body{
 }
 
 body{
-  background:#edf0f2;
+  background:#e9edf0;
   color:var(--ink);
   font-family:Arial,Helvetica,sans-serif;
 }
 
-/* =========================================================
-   THANH CÔNG CỤ
-========================================================= */
+
+/* =====================================================
+   TOOLBAR
+===================================================== */
 
 .toolbar{
   position:sticky;
   top:0;
-  z-index:1000;
-  display:flex;
-  align-items:center;
-  gap:9px;
-  flex-wrap:wrap;
-  padding:10px 14px;
+  z-index:50;
+
   background:#fff;
-  border-bottom:1px solid #d7dce0;
-  box-shadow:0 3px 12px #00000012;
+
+  border-bottom:1px solid #d8dee4;
+
+  padding:10px 14px;
+
+  display:flex;
+  gap:8px;
+  align-items:center;
+  flex-wrap:wrap;
+
+  box-shadow:0 2px 10px #00000012;
 }
 
 .toolbar strong{
-  flex:1 1 auto;
-  min-width:240px;
-  padding-left:10px;
-  border-left:5px solid var(--yellow);
-  color:#111;
-  font-size:17px;
-  font-weight:800;
+  margin-right:auto;
+
+  color:var(--black);
+
+  font-size:18px;
+
+  border-left:4px solid var(--yellow);
+
+  padding-left:9px;
 }
 
 button{
   border:0;
   border-radius:8px;
-  padding:11px 16px;
-  background:#111;
-  color:#fff;
-  font-size:14px;
-  font-weight:800;
+
+  padding:10px 14px;
+
+  font-weight:700;
+
   cursor:pointer;
+
+  background:var(--black);
+  color:#fff;
 }
 
 button.secondary{
-  background:#fff7d7;
-  color:#493900;
-  border:1px solid #e1b72d;
+  background:#fff4c7;
+  color:#3b3000;
+
+  border:1px solid #e4bb32;
 }
 
 button.danger{
-  background:#fff1f1;
-  color:#a52222;
-  border:1px solid #efc5c5;
+  background:#fff0f0;
+  color:#a22;
+
+  border:1px solid #f0caca;
 }
 
-/* =========================================================
-   KHỔ A4 TRÊN MÀN HÌNH
-========================================================= */
+
+/* =====================================================
+   A4 SCREEN
+===================================================== */
 
 .paper{
-  position:relative;
   width:210mm;
+
   min-height:297mm;
+
   margin:18px auto;
-  padding:11mm 12mm 16mm;
+
   background:#fff;
-  box-shadow:0 4px 22px #00000018;
+
+  box-shadow:0 3px 18px #00000018;
+
+  padding:10mm 12mm 15mm;
+
+  position:relative;
+
+  break-inside:avoid;
 }
 
-/* =========================================================
+
+/* =====================================================
    HEADER
-========================================================= */
+===================================================== */
 
 .brand{
   display:flex;
+
   align-items:center;
+
   justify-content:space-between;
-  gap:12px;
-  min-height:19mm;
-  margin-bottom:8mm;
-  padding-bottom:6px;
+
+  gap:10px;
+
   border-bottom:3px solid var(--yellow);
+
+  padding-bottom:6px;
+
+  margin-bottom:6mm;
 }
 
 .brand-left{
   display:flex;
+
   align-items:center;
-  gap:11px;
+
+  gap:10px;
+
   min-width:0;
 }
 
 .brand-logo{
-  flex:0 0 18mm;
   width:18mm;
   height:18mm;
+
   object-fit:contain;
+
   display:block;
+
+  flex:none;
 }
 
 .brand-name{
-  color:#111;
-  font-size:20px;
-  line-height:1.12;
   font-weight:900;
-  letter-spacing:.6px;
+
+  font-size:20px;
+
+  letter-spacing:.8px;
+
+  color:var(--black);
+
+  line-height:1.12;
 }
 
 .brand-sub{
-  margin-top:3px;
-  color:#606a73;
-  font-size:8.5px;
-  line-height:1.2;
-  letter-spacing:.45px;
+  font-size:9px;
+
+  color:#5c6670;
+
+  letter-spacing:.6px;
+
+  margin-top:2px;
 }
 
 .company-meta{
-  margin-top:3px;
-  color:#747d85;
-  font-size:7px;
-  line-height:1.25;
-}
+  font-size:7.5px;
 
-.docno{
-  flex:0 0 auto;
-  color:#555;
-  font-size:10px;
-  text-align:right;
+  color:#667085;
+
+  margin-top:3px;
+
   white-space:nowrap;
 }
 
-.input-sm{
-  display:inline-block;
-  width:105px !important;
+.docno{
+  font-size:10.5px;
+
+  text-align:right;
+
+  color:#555;
+
+  white-space:nowrap;
 }
 
-/* =========================================================
-   TRANG BÌA
-========================================================= */
+
+/* =====================================================
+   HEADINGS
+===================================================== */
+
+h1{
+  text-align:center;
+
+  font-size:27px;
+
+  margin:5mm 0 4mm;
+
+  color:#172026;
+}
+
+h2{
+  text-align:center;
+
+  font-size:18px;
+
+  margin:0 0 8px;
+}
+
+h3{
+  font-size:14px;
+
+  margin:9px 0 6px;
+
+  color:var(--black);
+
+  border-left:4px solid var(--yellow);
+
+  padding:6px 8px;
+
+  background:linear-gradient(
+    90deg,
+    #fff9df,
+    transparent
+  );
+
+  break-after:avoid;
+}
+
+
+/* =====================================================
+   COVER
+===================================================== */
 
 .cover-visual{
-  width:78mm;
-  height:46mm;
-  margin:2mm auto 4mm;
+  width:82mm;
+  height:48mm;
+
+  margin:2mm auto 5mm;
+
   overflow:hidden;
-  border:1px solid #d5d5d5;
+
+  border:1px solid #ddd;
+
   border-radius:5px;
-  background:#f5f5f5;
+
   box-shadow:0 6px 18px #00000014;
+
+  break-inside:avoid;
 }
 
 .cover-visual img{
-  display:block;
   width:100%;
   height:100%;
+
   object-fit:cover;
+
+  display:block;
 }
 
 .cover-title{
-  margin:4mm 0 5mm;
-  color:#171e23;
-  font-size:26px;
-  line-height:1.15;
+  margin-top:5mm;
+
+  font-size:27px;
+
+  letter-spacing:.5px;
+}
+
+.watermark{
+  position:absolute;
+
+  left:50%;
+  top:52%;
+
+  transform:
+    translate(-50%,-50%)
+    rotate(-35deg);
+
+  font-size:38px;
+
   font-weight:900;
-  letter-spacing:.7px;
-  text-align:center;
+
+  color:#f4b40012;
+
+  white-space:nowrap;
+
+  pointer-events:none;
 }
 
 .cover-grid{
-  position:relative;
-  z-index:2;
-  width:100%;
-  max-width:145mm;
-  margin:5mm auto 0;
+  margin:7mm auto 0;
+
+  max-width:150mm;
+
   text-align:center;
 }
 
 .cover-grid .row{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:7px;
-  min-height:9mm;
-  margin:2mm 0;
+  margin:5px 0;
+
   font-size:14px;
-  line-height:1.2;
 }
 
-.cover-grid .row.main{
-  font-size:15.5px;
+.cover-grid .main{
+  font-size:16px;
+
   font-weight:800;
 }
 
 .cover-grid input{
   display:inline-block;
+
   width:auto;
+
   max-width:100%;
-  min-width:0;
+
   height:8mm;
-  padding:3px 7px;
-  border:1px solid #d5ad31;
+
+  padding:3px 6px;
+
+  border:1px solid #d6b43a;
+
   border-radius:4px;
+
   background:#fffdf0;
+
   color:#111;
 }
 
@@ -251,252 +364,309 @@ button.danger{
 
 .cover-bottom{
   display:flex;
+
   justify-content:center;
+
   align-items:center;
+
   margin-top:6mm;
 }
 
 .cover-bottom input{
-  width:52mm !important;
+  width:48mm !important;
+
   text-align:center;
+
+  border:0;
+
+  background:transparent;
+
   font-weight:800;
 }
 
-.watermark{
-  position:absolute;
-  left:50%;
-  top:53%;
-  z-index:0;
-  transform:translate(-50%,-50%) rotate(-35deg);
-  color:#f4b40012;
-  font-size:36px;
-  font-weight:900;
-  line-height:1;
-  white-space:nowrap;
-  pointer-events:none;
-}
 
-/* =========================================================
-   TIÊU ĐỀ
-========================================================= */
-
-h1{
-  color:#172026;
-  font-size:24px;
-  text-align:center;
-}
-
-h2{
-  margin:0 0 8px;
-  color:#20262b;
-  font-size:17px;
-  text-align:center;
-}
-
-h3{
-  margin:9px 0 6px;
-  padding:6px 8px;
-  border-left:4px solid var(--yellow);
-  background:linear-gradient(
-    90deg,
-    #fff8dc 0%,
-    #fffdf5 65%,
-    transparent 100%
-  );
-  color:#111;
-  font-size:14px;
-  line-height:1.25;
-}
-
-/* =========================================================
-   BẢNG
-========================================================= */
+/* =====================================================
+   TABLE
+===================================================== */
 
 table{
   width:100%;
+
   border-collapse:collapse;
-  table-layout:fixed;
-  font-size:9.5px;
+
+  font-size:9.7px;
+
+  table-layout:auto;
+
+  break-inside:auto;
+}
+
+thead,
+tr{
+  break-inside:avoid;
+  page-break-inside:avoid;
 }
 
 th,
 td{
+  border:1px solid #aeb7bf;
+
   padding:3px 4px;
-  border:1px solid #adb6bd;
+
   vertical-align:middle;
-  line-height:1.15;
-  overflow-wrap:anywhere;
+
+  line-height:1.18;
 }
 
 th{
   background:var(--soft);
-  color:#111;
+
   font-weight:800;
+
+  color:#171717;
 }
 
-td.label{
-  width:43%;
+.label{
   font-weight:700;
+
+  width:43%;
 }
 
 .section{
-  background:#111 !important;
+  background:var(--black) !important;
+
   color:#fff !important;
-  border-left:4px solid var(--yellow) !important;
+
   font-weight:900;
+
+  border-left:4px solid var(--yellow) !important;
 }
 
 .price td{
   font-size:11px;
-  font-weight:800;
-}
 
-.center{
-  text-align:center;
+  font-weight:800;
 }
 
 .right{
   text-align:right;
 }
 
-/* =========================================================
-   Ô NHẬP
-========================================================= */
+.center{
+  text-align:center;
+}
+
+
+/* =====================================================
+   TEXT
+===================================================== */
+
+.note{
+  font-size:9.4px;
+
+  line-height:1.3;
+
+  margin:5px 0;
+}
+
+.note b,
+.note strong{
+  font-weight:800;
+}
+
+.para{
+  font-size:9.6px;
+
+  line-height:1.3;
+
+  margin:4px 0;
+}
+
+ul{
+  margin:3px 0 5px 17px;
+
+  padding:0;
+}
+
+li{
+  font-size:9.3px;
+
+  line-height:1.28;
+
+  margin:1px 0;
+}
+
+li,
+p,
+h3{
+  break-inside:avoid;
+}
+
+.hint{
+  font-size:9px;
+
+  color:#6b7280;
+
+  margin:4px 0 8px;
+}
+
+.mono{
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    monospace;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
 
 input,
 textarea,
 select,
 .editable{
-  width:100%;
-  min-width:0;
-  max-width:100%;
-  padding:3px 5px;
-  border:1px solid #d6b43a;
-  border-radius:4px;
-  background:#fffdf0;
-  color:#111;
   font:inherit;
+
+  border:1px solid #d6b43a;
+
+  border-radius:4px;
+
+  padding:3px 5px;
+
+  background:#fffdf0;
+
+  color:#111;
+
+  width:100%;
+
+  min-width:0;
 }
 
-input:focus,
-textarea:focus,
-select:focus{
-  outline:2px solid #f4b40033;
-  border-color:#d99b00;
-}
+.editable{
+  display:inline-block;
 
-textarea{
-  min-height:38px;
-  resize:vertical;
+  min-width:45px;
 }
 
 input.num{
   text-align:right;
 }
 
-.editable{
+.input-sm{
+  width:100px;
+
   display:inline-block;
-  min-width:45px;
 }
 
-/* =========================================================
-   NỘI DUNG
-========================================================= */
+textarea{
+  resize:vertical;
 
-.note{
-  margin:4px 0;
-  font-size:9.2px;
-  line-height:1.28;
+  min-height:38px;
 }
 
-.para{
-  margin:3px 0;
-  font-size:9.4px;
-  line-height:1.28;
-}
 
-ul{
-  margin:3px 0 5px 17px;
-  padding:0;
-}
-
-li{
-  margin:1px 0;
-  font-size:9.1px;
-  line-height:1.24;
-}
-
-.hint{
-  margin:4px 0 8px;
-  color:#68717a;
-  font-size:8.5px;
-}
-
-.mono{
-  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
-}
-
-/* =========================================================
-   CHỮ KÝ
-========================================================= */
+/* =====================================================
+   SIGNATURE
+===================================================== */
 
 .sign{
   display:grid;
+
   grid-template-columns:1fr 1fr;
+
   gap:35px;
-  margin-top:18px;
+
   text-align:center;
+
+  margin-top:20px;
+
   font-size:10px;
+
+  break-inside:avoid;
 }
 
 .sign-space{
   height:40px;
 }
 
-/* =========================================================
+
+/* =====================================================
    FOOTER
-========================================================= */
+===================================================== */
 
 .footer{
-  position:absolute;
-  right:12mm;
-  bottom:7mm;
-  left:12mm;
-  display:flex;
-  justify-content:space-between;
-  padding-top:3px;
+  margin-top:8mm;
+
   border-top:2px solid var(--yellow);
-  color:#222;
+
+  padding-top:3px;
+
   font-size:8px;
+
+  color:var(--black);
+
+  display:flex;
+
+  justify-content:space-between;
+
+  break-inside:avoid;
 }
 
-/* =========================================================
-   IPAD / MOBILE
-========================================================= */
+
+/* =====================================================
+   MOBILE
+===================================================== */
 
 @media(max-width:900px){
 
-  body{
-    background:#edf0f2;
-  }
-
   .toolbar{
     position:static;
-    padding:9px 12px;
-  }
-
-  .toolbar strong{
-    width:100%;
-    flex:none;
-    font-size:16px;
   }
 
   .paper{
     width:100%;
-    min-height:0;
-    margin:10px 0;
-    padding:18px 18px 45px;
-    box-shadow:0 2px 12px #00000012;
+
+    min-height:auto;
+
+    margin:0 0 12px;
+
+    padding:18px;
+
+    box-shadow:none;
+  }
+
+  .footer{
+    margin-top:25px;
+  }
+
+  .cover-grid{
+    max-width:100%;
+  }
+
+  .cover-grid .row{
+    display:grid;
+
+    grid-template-columns:90px minmax(0,1fr);
+
+    gap:7px;
+
+    align-items:center;
+
+    text-align:right;
+  }
+
+  .cover-grid .row b{
+    white-space:nowrap;
+  }
+
+  .cover-grid input{
+    width:100% !important;
+  }
+
+  .cover-bottom{
+    margin-top:20px;
   }
 
   .brand{
@@ -506,19 +676,15 @@ li{
   .brand-logo{
     width:55px;
     height:55px;
-    flex-basis:55px;
   }
 
   .brand-name{
     font-size:17px;
   }
 
-  .brand-sub{
-    font-size:7.5px;
-  }
-
   .company-meta{
     font-size:7px;
+
     white-space:normal;
   }
 
@@ -527,52 +693,18 @@ li{
   }
 
   .cover-visual{
-    width:min(78mm,72vw);
+    width:min(82mm,72vw);
+
     height:auto;
-    aspect-ratio:78 / 46;
-  }
 
-  .cover-title{
-    font-size:25px;
-  }
-
-  .cover-grid{
-    max-width:100%;
-  }
-
-  .cover-grid .row,
-  .cover-grid .row.main{
-    display:grid;
-    grid-template-columns:88px minmax(0,1fr);
-    gap:7px;
-    justify-content:stretch;
-    text-align:right;
-    font-size:14px;
-  }
-
-  .cover-grid .row b{
-    text-align:right;
-  }
-
-  .cover-grid input{
-    width:100% !important;
-    min-width:0;
-    font-size:14px;
-  }
-
-  .cover-bottom{
-    margin-top:20px;
-  }
-
-  .footer{
-    position:static;
-    margin-top:25px;
+    aspect-ratio:82/48;
   }
 }
 
-/* =========================================================
-   IN
-========================================================= */
+
+/* =====================================================
+   PRINT — QUAN TRỌNG NHẤT
+===================================================== */
 
 @media print{
 
@@ -584,253 +716,226 @@ li{
   html,
   body{
     width:210mm;
+
     margin:0;
     padding:0;
-    background:#fff !important;
-  }
 
-  body{
-    color:#111;
+    background:#fff !important;
   }
 
   .toolbar{
     display:none !important;
   }
 
+
   /*
-    ĐÂY LÀ PHẦN QUAN TRỌNG NHẤT.
-
-    Không dùng:
-      height:297mm
-      overflow:hidden
-      page-break-after:always
-
-    Nội dung được phép chảy tự nhiên.
+    KHÔNG ép height:297mm
+    KHÔNG overflow:hidden
+    KHÔNG dùng page-break-after:always
   */
 
   .paper{
     width:210mm !important;
-    min-height:297mm !important;
+
+    min-height:0 !important;
+
     height:auto !important;
 
     margin:0 !important;
-    padding:9mm 11mm 12mm !important;
 
-    background:#fff !important;
+    padding:10mm 12mm 12mm !important;
+
     box-shadow:none !important;
 
+    position:relative;
+
+    break-after:page;
+
+    page-break-after:auto;
+
     overflow:visible !important;
+  }
 
-    break-before:page;
-    page-break-before:always;
-
+  .paper:last-child{
     break-after:auto;
+
     page-break-after:auto;
   }
 
-  .paper:first-of-type{
-    break-before:auto;
-    page-break-before:auto;
-  }
 
   /*
-    Các trang báo giá tiếp theo bắt đầu ở trang A4 mới,
-    nhưng nếu bản thân nội dung dài thì được phép
-    tự động chảy sang trang kế tiếp.
+    Không cho trình duyệt tự chia một
+    bảng / chữ / chữ ký giữa hai trang.
   */
 
   table{
-    width:100%;
-    page-break-inside:auto;
     break-inside:auto;
+
+    page-break-inside:auto;
   }
 
   tr{
-    page-break-inside:avoid;
     break-inside:avoid;
+
+    page-break-inside:avoid;
   }
 
   h1,
   h2,
-  h3{
-    page-break-after:avoid;
-    break-after:avoid;
+  h3,
+  p,
+  li,
+  .cover-visual,
+  .sign,
+  .footer{
+    break-inside:avoid;
+
+    page-break-inside:avoid;
   }
 
-  .sign{
-    page-break-inside:avoid;
-    break-inside:avoid;
-  }
 
   /*
-    Ô nhập trở thành chữ khi xuất PDF.
+    Input khi in thành chữ thường,
+    không còn khung vàng.
   */
 
   input,
+  .editable,
   textarea,
-  select,
-  .editable{
+  select{
     border:0 !important;
+
     background:transparent !important;
-    box-shadow:none !important;
-    outline:none !important;
+
     padding:0 !important;
 
-    color:#111 !important;
+    appearance:none;
 
-    appearance:none !important;
-    -webkit-appearance:none !important;
+    -webkit-appearance:none;
+
+    color:#111 !important;
   }
 
-  /*
-    Logo và ảnh.
-  */
 
   .cover-visual{
-    box-shadow:none !important;
-    page-break-inside:avoid;
-    break-inside:avoid;
+    box-shadow:none;
   }
 
-  /*
-    Footer không ghim bằng absolute khi in.
-    Nó nằm trong luồng nội dung để không tạo
-    khoảng trắng hoặc trang rỗng.
-  */
-
-  .footer{
-    position:static !important;
-    right:auto;
-    bottom:auto;
-    left:auto;
-
-    width:100%;
-    margin-top:7mm;
-  }
-
-  /*
-    Giảm nhẹ typography để các trang sử dụng
-    tối đa diện tích A4.
-  */
 
   .brand{
-    margin-bottom:5mm;
+    margin-bottom:6mm;
   }
 
   .brand-logo{
-    width:15mm;
-    height:15mm;
-    flex-basis:15mm;
+    width:16mm;
+    height:16mm;
   }
 
   .brand-name{
-    font-size:17px;
+    font-size:18px;
   }
 
   .brand-sub{
-    font-size:7.3px;
+    font-size:8px;
   }
 
   .company-meta{
-    font-size:6.2px;
+    font-size:6.7px;
   }
 
   .docno{
-    font-size:8.5px;
+    font-size:9px;
   }
 
-  h2{
-    font-size:16px;
-    margin-bottom:6px;
-  }
-
-  h3{
-    margin:6px 0 4px;
-    padding:4px 6px;
-    font-size:12.5px;
-  }
 
   table{
-    font-size:8.2px;
+    font-size:8.6px;
   }
 
   th,
   td{
-    padding:2px 3px;
-    line-height:1.08;
+    padding:2.5px 3px;
+
+    line-height:1.1;
   }
 
   .note{
-    margin:2.5px 0;
-    font-size:8px;
-    line-height:1.13;
+    font-size:8.5px;
+
+    line-height:1.2;
+
+    margin:4px 0;
   }
 
   .para{
-    margin:2px 0;
-    font-size:8.1px;
-    line-height:1.13;
-  }
+    font-size:8.7px;
 
-  ul{
-    margin-top:2px;
-    margin-bottom:3px;
+    line-height:1.2;
+
+    margin:3px 0;
   }
 
   li{
+    font-size:8.5px;
+
+    line-height:1.18;
+
     margin:0;
-    font-size:7.9px;
-    line-height:1.08;
   }
 
   .sign{
-    margin-top:10px;
-    font-size:8.5px;
+    margin-top:14px;
+
+    font-size:9px;
   }
 
   .sign-space{
-    height:30px;
+    height:34px;
   }
 
-  /*
-    Trang bìa.
-  */
-
   .cover-visual{
-    width:75mm;
-    height:43mm;
-    margin:1mm auto 3mm;
+    width:78mm;
+
+    height:45mm;
+
+    margin:1mm auto 4mm;
   }
 
   .cover-title{
-    margin:3mm 0 3mm;
-    font-size:24px;
+    font-size:25px;
+
+    margin:4mm 0 4mm;
   }
 
   .cover-grid{
-    margin-top:3mm;
+    margin-top:5mm;
   }
 
   .cover-grid .row{
-    min-height:7mm;
-    margin:1.5mm 0;
-    font-size:11.5px;
+    margin:3px 0;
+
+    font-size:12.5px;
   }
 
-  .cover-grid .row.main{
-    font-size:13px;
+  .cover-grid .main{
+    font-size:14px;
   }
 
   .cover-grid input{
     height:auto;
-    padding:1px 2px !important;
+
+    padding:1px 2px;
   }
 
   .cover-bottom{
-    margin-top:3mm;
+    margin-top:4mm;
   }
 
   .watermark{
-    font-size:32px;
+    font-size:34px;
+  }
+
+  .footer{
+    margin-top:8mm;
   }
 }
