@@ -1,1 +1,767 @@
-#
+:root{
+  --yellow:#f4b400;
+  --yellow-2:#ffd24a;
+  --yellow-soft:#fff7d6;
+  --black:#111;
+  --ink:#20252b;
+  --line:#b9c0c7;
+  --paper:#fff;
+  --screen:#e8edf1;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:var(--screen);
+  color:var(--ink);
+  font-family:Arial,Helvetica,sans-serif;
+  -webkit-print-color-adjust:exact;
+  print-color-adjust:exact;
+}
+
+
+/* =========================
+   TOOLBAR
+========================= */
+
+.toolbar{
+  position:sticky;
+  top:0;
+  z-index:100;
+  min-height:64px;
+  padding:10px 16px;
+  display:flex;
+  align-items:center;
+  gap:9px;
+  flex-wrap:wrap;
+
+  background:rgba(255,255,255,.97);
+  border-bottom:1px solid #d6dce1;
+
+  box-shadow:
+    0 3px 16px rgba(0,0,0,.10);
+
+  backdrop-filter:blur(8px);
+}
+
+.toolbar strong{
+  margin-right:auto;
+  padding-left:11px;
+
+  border-left:5px solid var(--yellow);
+
+  color:var(--black);
+
+  font-size:17px;
+  line-height:1.2;
+}
+
+button{
+  appearance:none;
+
+  border:1px solid var(--black);
+  border-radius:8px;
+
+  min-height:40px;
+
+  padding:9px 14px;
+
+  font:
+    700 13px/1
+    Arial,Helvetica,sans-serif;
+
+  cursor:pointer;
+
+  background:var(--black);
+  color:#fff;
+
+  transition:
+    transform .12s ease,
+    box-shadow .12s ease;
+}
+
+button:hover{
+  box-shadow:0 4px 12px rgba(0,0,0,.14);
+  transform:translateY(-1px);
+}
+
+button:active{
+  transform:translateY(0);
+}
+
+button.secondary{
+  background:var(--yellow-soft);
+  color:#3b3000;
+  border-color:#e0b62f;
+}
+
+button.danger{
+  background:#fff1f1;
+  color:#a21d1d;
+  border-color:#edc3c3;
+}
+
+
+/* =========================
+   A4
+========================= */
+
+.paper{
+  position:relative;
+
+  width:210mm;
+  height:297mm;
+  min-height:297mm;
+
+  margin:18px auto;
+
+  padding:
+    15mm
+    15mm
+    16mm;
+
+  overflow:hidden;
+
+  background:var(--paper);
+
+  box-shadow:
+    0 5px 24px rgba(0,0,0,.14);
+
+  page-break-after:always;
+  break-after:page;
+}
+
+.paper:last-child{
+  page-break-after:auto;
+  break-after:auto;
+}
+
+
+/* =========================
+   BRAND
+========================= */
+
+.brand{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  gap:18px;
+
+  min-height:62px;
+
+  margin-bottom:17px;
+  padding-bottom:9px;
+
+  border-bottom:4px solid var(--yellow);
+}
+
+.brand-left{
+  display:flex;
+  align-items:center;
+  gap:12px;
+
+  min-width:0;
+}
+
+.brand-logo{
+  flex:0 0 auto;
+}
+
+.brand-logo img{
+  display:block;
+
+  width:68px;
+  height:58px;
+
+  object-fit:contain;
+}
+
+.brand-name{
+  color:var(--black);
+
+  font-size:21px;
+  font-weight:900;
+
+  line-height:1.12;
+
+  letter-spacing:.9px;
+}
+
+.brand-sub{
+  margin-top:3px;
+
+  color:#59636d;
+
+  font-size:9px;
+
+  letter-spacing:.65px;
+}
+
+.company-meta{
+  max-width:125mm;
+
+  margin-top:3px;
+
+  color:#66717c;
+
+  font-size:8.2px;
+
+  line-height:1.35;
+}
+
+.docno{
+  color:#555;
+
+  font-size:10.5px;
+  line-height:1.35;
+
+  text-align:right;
+
+  white-space:nowrap;
+}
+
+.simple-brand{
+  min-height:48px;
+}
+
+
+/* =========================
+   COVER
+========================= */
+
+.cover-title{
+  margin:22px 0 12px;
+
+  color:#172026;
+
+  text-align:center;
+
+  font-size:28px;
+  font-weight:900;
+
+  letter-spacing:.5px;
+}
+
+.cover-visual{
+  width:82mm;
+  height:49mm;
+
+  margin:
+    0 auto
+    13px;
+
+  overflow:hidden;
+
+  border:1px solid #ddd;
+  border-radius:5px;
+
+  box-shadow:
+    0 8px 22px rgba(0,0,0,.12);
+}
+
+.cover-visual img{
+  width:100%;
+  height:100%;
+
+  display:block;
+
+  object-fit:cover;
+}
+
+.cover-grid{
+  max-width:155mm;
+
+  margin:16px auto 0;
+
+  text-align:center;
+}
+
+.cover-grid .row{
+  margin:6px 0;
+
+  font-size:14px;
+  line-height:1.4;
+}
+
+.cover-grid .main{
+  font-size:17px;
+  font-weight:800;
+}
+
+.cover-grid input{
+  display:inline-block;
+
+  width:auto;
+
+  max-width:100%;
+}
+
+.cover-bottom{
+  position:absolute;
+
+  left:15mm;
+  right:15mm;
+
+  bottom:18mm;
+
+  display:flex;
+
+  justify-content:center;
+  align-items:end;
+}
+
+.cover-bottom input{
+  width:150px;
+
+  background:transparent;
+  border:0;
+
+  text-align:center;
+}
+
+.watermark{
+  position:absolute;
+
+  left:50%;
+  top:57%;
+
+  transform:
+    translate(-50%,-50%)
+    rotate(-35deg);
+
+  color:rgba(244,180,0,.07);
+
+  font-size:39px;
+  font-weight:900;
+
+  white-space:nowrap;
+
+  pointer-events:none;
+  user-select:none;
+}
+
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+h1{
+  text-align:center;
+
+  font-size:24px;
+
+  margin:
+    18px 0
+    10px;
+
+  color:#172026;
+}
+
+h2{
+  text-align:center;
+
+  font-size:17px;
+
+  margin:
+    0 0
+    12px;
+}
+
+h3{
+  margin:
+    15px 0
+    8px;
+
+  padding:
+    7px 9px;
+
+  border-left:4px solid var(--yellow);
+
+  background:
+    linear-gradient(
+      90deg,
+      #fff9df 0%,
+      #fff 78%
+    );
+
+  color:var(--black);
+
+  font-size:14px;
+
+  line-height:1.25;
+}
+
+.para{
+  margin:6px 0;
+
+  font-size:11.1px;
+
+  line-height:1.42;
+}
+
+.note{
+  margin:8px 0;
+
+  font-size:10.8px;
+
+  line-height:1.46;
+}
+
+ul{
+  margin:
+    5px 0
+    8px 19px;
+
+  padding:0;
+}
+
+li{
+  margin:2.5px 0;
+
+  font-size:10.9px;
+
+  line-height:1.38;
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+table{
+  width:100%;
+
+  border-collapse:collapse;
+
+  font-size:11.1px;
+
+  table-layout:fixed;
+}
+
+th,
+td{
+  border:1px solid #aeb7bf;
+
+  padding:
+    5.5px
+    6.5px;
+
+  vertical-align:middle;
+
+  overflow-wrap:anywhere;
+}
+
+th{
+  background:var(--yellow-soft);
+
+  color:#171717;
+
+  font-weight:800;
+}
+
+.label{
+  width:43%;
+
+  font-weight:700;
+}
+
+.section{
+  background:var(--black)!important;
+
+  color:#fff!important;
+
+  font-weight:900;
+
+  border-left:
+    4px solid
+    var(--yellow)!important;
+}
+
+.price td{
+  font-size:12.5px;
+
+  font-weight:800;
+}
+
+.center{
+  text-align:center;
+}
+
+.right{
+  text-align:right;
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+input,
+textarea,
+select{
+  width:100%;
+  max-width:100%;
+  min-width:0;
+
+  padding:
+    3px
+    5px;
+
+  border:
+    1px solid
+    #d6b43a;
+
+  border-radius:4px;
+
+  background:#fffdf0;
+
+  color:#111;
+
+  font:inherit;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+  outline:
+    2px solid
+    rgba(244,180,0,.32);
+
+  border-color:#c79500;
+
+  background:#fff;
+}
+
+.input-sm{
+  display:inline-block;
+
+  width:100px;
+}
+
+input.num{
+  text-align:right;
+}
+
+textarea{
+  resize:none;
+
+  min-height:48px;
+
+  line-height:1.35;
+}
+
+
+/* =========================
+   SIGNATURE
+========================= */
+
+.sign{
+  display:grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap:35px;
+
+  margin-top:32px;
+
+  text-align:center;
+
+  font-size:11px;
+}
+
+.sign-space{
+  height:45px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+  position:absolute;
+
+  left:15mm;
+  right:15mm;
+
+  bottom:8mm;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  padding-top:4px;
+
+  border-top:
+    3px solid
+    var(--yellow);
+
+  color:var(--black);
+
+  font-size:8.5px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px){
+
+  .toolbar{
+    position:sticky;
+
+    top:0;
+
+    padding:
+      9px
+      10px;
+  }
+
+  .toolbar strong{
+    flex:
+      1 0 100%;
+
+    font-size:15px;
+  }
+
+  .paper{
+    width:100%;
+
+    height:auto;
+
+    min-height:0;
+
+    margin:
+      0 0
+      12px;
+
+    padding:18px;
+
+    box-shadow:
+      0 2px 12px
+      rgba(0,0,0,.10);
+  }
+
+  .footer,
+  .cover-bottom{
+    position:static;
+
+    margin-top:25px;
+  }
+
+  .watermark{
+    font-size:27px;
+  }
+
+  .brand-name{
+    font-size:17px;
+  }
+
+  .brand-sub{
+    font-size:8px;
+  }
+
+  .company-meta{
+    font-size:7.5px;
+  }
+
+}
+
+
+/* =========================
+   PRINT / PDF
+========================= */
+
+@media print{
+
+  @page{
+    size:A4 portrait;
+    margin:0;
+  }
+
+  html,
+  body{
+    width:210mm;
+
+    margin:0;
+
+    background:#fff;
+  }
+
+  body{
+    overflow:visible;
+  }
+
+  .toolbar{
+    display:none!important;
+  }
+
+  .paper{
+    width:210mm;
+
+    height:297mm;
+
+    min-height:297mm;
+
+    margin:0;
+
+    padding:
+      15mm
+      15mm
+      16mm;
+
+    overflow:hidden;
+
+    box-shadow:none;
+
+    page-break-after:always;
+    break-after:page;
+  }
+
+  .paper:last-child{
+    page-break-after:auto;
+    break-after:auto;
+  }
+
+  input,
+  textarea,
+  select{
+    border:0!important;
+
+    outline:0!important;
+
+    background:transparent!important;
+
+    box-shadow:none!important;
+
+    padding:0;
+
+    appearance:none;
+
+    -webkit-appearance:none;
+  }
+
+  textarea{
+    resize:none;
+
+    overflow:hidden;
+  }
+
+  .cover-visual{
+    box-shadow:none;
+  }
+
+  button{
+    display:none!important;
+  }
+}
